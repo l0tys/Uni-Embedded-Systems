@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\settings\UA31D_LEDandPBs_if2_if2.Debug.general.xcl" --backend -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\settings\UA31D_LEDandPBs_if2_if2.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31E_LEDandPBs_if4\settings\UA31E_LEDandPBs_if4.Debug.general.xcl" --backend -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31E_LEDandPBs_if4\settings\UA31E_LEDandPBs_if4.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\settings\UA31D_LEDandPBs_if2_if2.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\settings\UA31D_LEDandPBs_if2_if2.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31E_LEDandPBs_if4\settings\UA31E_LEDandPBs_if4.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31E_LEDandPBs_if4\settings\UA31E_LEDandPBs_if4.Debug.driver.xcl" 
 
 @echo off 
 :end

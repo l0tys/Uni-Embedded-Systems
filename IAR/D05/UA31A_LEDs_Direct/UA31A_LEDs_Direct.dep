@@ -5,9 +5,54 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\asm.s43</file>
             <file>$PROJ_DIR$\UA31A_LEDs_Direct.s43</file>
+            <file>$PROJ_DIR$\..\UA31C_LEDs_XOR\UA31C_LEDs_XOR.s43</file>
+            <file>$PROJ_DIR$\Debug\List\UA31A_LEDs_Direct.map</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31A_LEDs_Direct.r43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
         </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 4 2</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\UA31A_LEDs_Direct.s43</name>
+            <outputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 5 7</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 3 6</file>
+                </tool>
+            </inputs>
+        </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
             <tool>XLINK</tool>

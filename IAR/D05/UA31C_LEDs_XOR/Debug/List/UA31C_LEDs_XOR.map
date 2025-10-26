@@ -1,24 +1,24 @@
 ###############################################################################
 #
-# IAR UBROF Linker V10.15.2.1487                          26/Oct/2025  20:00:36
+# IAR UBROF Linker V10.15.2.1487                          26/Oct/2025  21:12:04
 # Copyright 1987-2023 IAR Systems AB.
 #
 #    Target Cpu    =  MSP430
 #    Map file      =
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\List\UA31C_LEDs_XOR.map
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\List\UA31C_LEDs_XOR.map
 #    Output file 1 =
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Exe\UA31C_LEDs_XOR.d43
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Exe\UA31C_LEDs_XOR.d43
 #                  =  Format: debug
 #                  =  UBROF version 11.1.1
 #                  =  Using library modules for C-SPY (-rt)
 #    Command line  =
 #        -f
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Exe\UA31C_LEDs_XOR.d43.rsp
-#        (C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Obj\UA31C_LEDs_XOR.r43
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Exe\UA31C_LEDs_XOR.d43.rsp
+#        (C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Obj\UA31C_LEDs_XOR.r43
 #        --output
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Exe\UA31C_LEDs_XOR.d43
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Exe\UA31C_LEDs_XOR.d43
 #        -l
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\List\UA31C_LEDs_XOR.map
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\List\UA31C_LEDs_XOR.map
 #        -xams "-IC:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\430\LIB\\" --f "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\430\config\linker\lnk430g2553.xcl" (-cmsp430 -QCODE_I=CODE_ID
@@ -74,14 +74,24 @@ _DATA20_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [0]
 _DATA16_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [0]
 _STACK_SIZE                0x0050  Pub         ?ABS_ENTRY_MOD [0]
 main                       0xC000  Loc         UA31C_LEDs_XOR
-LEDs_RRRRRRRR              0xC00C  Loc         UA31C_LEDs_XOR
-Repeat_forever             0xC014  Loc         UA31C_LEDs_XOR
-Delay_1                    0xC014  Loc         UA31C_LEDs_XOR
-s_loop_1                   0xC018  Loc         UA31C_LEDs_XOR
-ms_loop_1                  0xC01C  Loc         UA31C_LEDs_XOR
-Delay_2                    0xC02E  Loc         UA31C_LEDs_XOR
-s_loop_2                   0xC032  Loc         UA31C_LEDs_XOR
-ms_loop_2                  0xC036  Loc         UA31C_LEDs_XOR
+LEDs_NNRGNNRG              0xC00C  Loc         UA31C_LEDs_XOR
+Repeat_forever             0xC018  Loc         UA31C_LEDs_XOR
+Delay_1                    0xC018  Loc         UA31C_LEDs_XOR
+s_loop_1                   0xC01C  Loc         UA31C_LEDs_XOR
+ms_loop_1                  0xC020  Loc         UA31C_LEDs_XOR
+LEDs_RGRGRGRG              0xC02C  Loc         UA31C_LEDs_XOR
+Delay_2                    0xC038  Loc         UA31C_LEDs_XOR
+s_loop_2                   0xC03C  Loc         UA31C_LEDs_XOR
+ms_loop_2                  0xC040  Loc         UA31C_LEDs_XOR
+LEDs_NNGRNNGR              0xC04C  Loc         UA31C_LEDs_XOR
+Delay_3                    0xC058  Loc         UA31C_LEDs_XOR
+s_loop_3                   0xC05C  Loc         UA31C_LEDs_XOR
+ms_loop_3                  0xC060  Loc         UA31C_LEDs_XOR
+LEDs_RGGRRGGR              0xC06C  Loc         UA31C_LEDs_XOR
+Delay_4                    0xC078  Loc         UA31C_LEDs_XOR
+s_loop_4                   0xC07C  Loc         UA31C_LEDs_XOR
+ms_loop_4                  0xC080  Loc         UA31C_LEDs_XOR
+LEDs_REPEAT                0xC08C  Loc         UA31C_LEDs_XOR
 
 [0] = Command line (linker generated)
 
@@ -103,24 +113,34 @@ Linker generated:
         _DATA16_HEAP_SIZE  0x0050  Pub
         _STACK_SIZE        0x0050  Pub
 **********
-File: C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Obj\UA31C_LEDs_XOR.r43
+File: C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Obj\UA31C_LEDs_XOR.r43
   Module: UA31C_LEDs_XOR
 
       Absolute module symbols:
         __MSP430G2203__  0x0000  Loc
         main             0xC000  Loc
-        LEDs_RRRRRRRR    0xC00C  Loc
-        Repeat_forever   0xC014  Loc
-        Delay_1          0xC014  Loc
-        s_loop_1         0xC018  Loc
-        ms_loop_1        0xC01C  Loc
-        Delay_2          0xC02E  Loc
-        s_loop_2         0xC032  Loc
-        ms_loop_2        0xC036  Loc
+        LEDs_NNRGNNRG    0xC00C  Loc
+        Repeat_forever   0xC018  Loc
+        Delay_1          0xC018  Loc
+        s_loop_1         0xC01C  Loc
+        ms_loop_1        0xC020  Loc
+        LEDs_RGRGRGRG    0xC02C  Loc
+        Delay_2          0xC038  Loc
+        s_loop_2         0xC03C  Loc
+        ms_loop_2        0xC040  Loc
+        LEDs_NNGRNNGR    0xC04C  Loc
+        Delay_3          0xC058  Loc
+        s_loop_3         0xC05C  Loc
+        ms_loop_3        0xC060  Loc
+        LEDs_RGGRRGGR    0xC06C  Loc
+        Delay_4          0xC078  Loc
+        s_loop_4         0xC07C  Loc
+        ms_loop_4        0xC080  Loc
+        LEDs_REPEAT      0xC08C  Loc
       Absolute code:
       Address         Size
       -------         ----
-      0xC000                0x4E
+      0xC000                0x9A
       0xFFFE                 0x2
 
 
@@ -132,10 +152,10 @@ File: C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Obj\UA
 
 SEGMENT  SPACE    START/END ADDRESS      SIZE  TYPE  ALIGN
 -------  -----  ---------------------    ----  ----  -----
-                               0xC000  0xC04D  0x4E   aseg
+                               0xC000  0xC099  0x9A   aseg
                                0xFFFE  0xFFFF   0x2   aseg
 
- 0 bytes of CODE memory (+ 80 absolute )
+ 0 bytes of CODE memory (+ 156 absolute )
 
 Errors: none
 Warnings: none

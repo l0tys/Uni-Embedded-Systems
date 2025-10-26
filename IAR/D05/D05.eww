@@ -9,5 +9,8 @@
     <project>
         <path>$WS_DIR$\UA31D_LEDandPBs_if2_if2\UA31D_LEDandPBs_if2_if2.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4.ewp</path>
+    </project>
     <batchBuild />
 </workspace>

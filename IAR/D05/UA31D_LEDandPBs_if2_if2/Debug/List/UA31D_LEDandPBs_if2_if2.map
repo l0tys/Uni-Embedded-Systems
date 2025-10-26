@@ -1,24 +1,24 @@
 ###############################################################################
 #
-# IAR UBROF Linker V10.15.2.1487                          26/Oct/2025  19:59:18
+# IAR UBROF Linker V10.15.2.1487                          26/Oct/2025  23:47:18
 # Copyright 1987-2023 IAR Systems AB.
 #
 #    Target Cpu    =  MSP430
 #    Map file      =
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\List\UA31D_LEDandPBs_if2_if2.map
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\List\UA31D_LEDandPBs_if2_if2.map
 #    Output file 1 =
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43
 #                  =  Format: debug
 #                  =  UBROF version 11.1.1
 #                  =  Using library modules for C-SPY (-rt)
 #    Command line  =
 #        -f
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43.rsp
-#        (C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Obj\UA31D_LEDandPBs_if2_if2.r43
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43.rsp
+#        (C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Obj\UA31D_LEDandPBs_if2_if2.r43
 #        --output
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43
 #        -l
-#        C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\List\UA31D_LEDandPBs_if2_if2.map
+#        C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\List\UA31D_LEDandPBs_if2_if2.map
 #        -xams "-IC:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\430\LIB\\" --f "C:\Program Files\IAR Systems\Embedded Workbench
 #        9.1\430\config\linker\lnk430g2553.xcl" (-cmsp430 -QCODE_I=CODE_ID
@@ -69,15 +69,20 @@
 
 ENTRY              SPACE  ADDRESS  KIND  TYPE  MODULE
 -----              -----  -------  ----  ----  ------
-__MSP430G2203__            0x0000  Loc         main [0]
-_DATA20_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [1]
-_DATA16_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [1]
-_STACK_SIZE                0x0050  Pub         ?ABS_ENTRY_MOD [1]
-init                       0xC000  Loc         main [0]
-main                       0xC004  Pub         main [0]
+__MSP430G2203__            0x0000  Loc         UA31D_LEDandPBs_if2_if2
+_DATA20_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [0]
+_DATA16_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [0]
+_STACK_SIZE                0x0050  Pub         ?ABS_ENTRY_MOD [0]
+main                       0xC000  Loc         UA31D_LEDandPBs_if2_if2
+Repeat_forever             0xC036  Loc         UA31D_LEDandPBs_if2_if2
+PB14off                    0xC03E  Loc         UA31D_LEDandPBs_if2_if2
+PB14off_PB15off            0xC046  Loc         UA31D_LEDandPBs_if2_if2
+PB14off_PB15on             0xC04E  Loc         UA31D_LEDandPBs_if2_if2
+PB14on                     0xC056  Loc         UA31D_LEDandPBs_if2_if2
+PB14on_PB15off             0xC05E  Loc         UA31D_LEDandPBs_if2_if2
+PB14on_PB15on              0xC06C  Loc         UA31D_LEDandPBs_if2_if2
 
-[0] = C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Obj\UA31D_LEDandPBs_if2_if2.r43
-[1] = Command line (linker generated)
+[0] = Command line (linker generated)
 
 
                 ****************************************
@@ -88,7 +93,7 @@ main                       0xC004  Pub         main [0]
 
 Linker generated:
   Module: ?FILLER_BYTES
-******************************************************
+**********
 Linker generated:
   Module: ?ABS_ENTRY_MOD
 
@@ -96,24 +101,24 @@ Linker generated:
         _DATA20_HEAP_SIZE  0x0050  Pub
         _DATA16_HEAP_SIZE  0x0050  Pub
         _STACK_SIZE        0x0050  Pub
-******************************************************
-File: C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Obj\UA31D_LEDandPBs_if2_if2.r43
-  Module: main
-       Segment part 0, CSTACK [root]
-       Address:  0x03B0 Size: 0x0 Align: 2(1)
-    --------------------------------------------------
-       Segment part 1, <CODE> 1 [root]
-                      (was CODE)
-       Address:  0xC000 Size: 0xE Align: 2(1)
-       Ref by:   Absolute parts
-      main                 0xC004  Pub
-      init                 0xC000  Loc
+**********
+File: C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Debug\Obj\UA31D_LEDandPBs_if2_if2.r43
+  Module: UA31D_LEDandPBs_if2_if2
 
       Absolute module symbols:
         __MSP430G2203__  0x0000  Loc
+        main             0xC000  Loc
+        Repeat_forever   0xC036  Loc
+        PB14on           0xC056  Loc
+        PB14off          0xC03E  Loc
+        PB14off_PB15on   0xC04E  Loc
+        PB14off_PB15off  0xC046  Loc
+        PB14on_PB15on    0xC06C  Loc
+        PB14on_PB15off   0xC05E  Loc
       Absolute code:
       Address         Size
       -------         ----
+      0xC000                0x7A
       0xFFFE                 0x2
 
 
@@ -123,14 +128,12 @@ File: C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31D_LEDandPBs_if2_if2\Deb
                 *                                      *
                 ****************************************
 
-SEGMENT   SPACE    START/END ADDRESS      SIZE  TYPE  ALIGN
--------   -----  ---------------------    ----  ----  -----
-CSTACK              0x03B0 - 0x03FF       0x50   rel   2(1)
-<CODE> 1            0xC000 - 0xC00D        0xE   rel   2(1)
-                                0xFFFE  0xFFFF   0x2   aseg
+SEGMENT  SPACE    START/END ADDRESS      SIZE  TYPE  ALIGN
+-------  -----  ---------------------    ----  ----  -----
+                               0xC000  0xC079  0x7A   aseg
+                               0xFFFE  0xFFFF   0x2   aseg
 
- 14 bytes of CODE memory (+ 2 absolute )
- 80 bytes of DATA memory
+ 0 bytes of CODE memory (+ 124 absolute )
 
 Errors: none
 Warnings: none

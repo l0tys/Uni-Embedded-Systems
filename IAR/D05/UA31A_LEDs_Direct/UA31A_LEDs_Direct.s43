@@ -3,14 +3,12 @@
                 org     0xC000
 
 main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
-
-;                mov.b   #00000000b,     &P2SEL          ; All P2 pins GPIOs
-;                mov.b   #00000000b,     &P2SEL2
                 bic.b   #BIT7+BIT6,     &P2SEL          ; P2.6,7 - GPIOs
 
 Repeat_forever  
-LEDs_RRRRRRRR   mov.b   #11111111b,     &P2DIR          ; LEDs template ++++++++
-                mov.b   #11111111b,     &P2OUT          ; LEDs color    RRRRRRRR
+
+LEDs_NNRGNNRG   mov.b   #11001100b,     &P2DIR          
+                mov.b   #01000100b,     &P2OUT          
 
 Delay_1         mov     #2000,          R15
 s_loop_1        mov     #200,           R14
@@ -21,8 +19,8 @@ ms_loop_1       nop
                 dec                     R15
                 jnz                     s_loop_1
                 
-LEDs_RNRNRNRN   mov.b   #10101010b,     &P2DIR          ; LEDs template +-+-+-+-
-                mov.b   #11111111b,     &P2OUT
+LEDs_RGRGRGRG   mov.b   #11111111b,     &P2DIR          
+                mov.b   #01010101b,     &P2OUT
 
 Delay_2         mov     #2000,          R15
 s_loop_2        mov     #200,           R14
@@ -33,8 +31,8 @@ ms_loop_2       nop
                 dec                     R15
                 jnz                     s_loop_2
 
-LEDs_GGGGGGGG   mov.b   #11111111b,     &P2DIR          ; LEDs template ++++++++
-                mov.b   #00000000b,     &P2OUT          ; LEDs color    GGGGGGGG
+LEDs_NNGRNNGR   mov.b   #11001100b,     &P2DIR          
+                mov.b   #10001000b,     &P2OUT          
 
 Delay_3         mov     #2000,          R15
 s_loop_3        mov     #200,           R14
@@ -45,8 +43,8 @@ ms_loop_3       nop
                 dec                     R15
                 jnz                     s_loop_3
                 
-LEDs_GNGNGNGN   mov.b   #10101010b,     &P2DIR          ; LEDs template +-+-+-+- 
-                mov.b   #00000000b,     &P2OUT
+LEDs_RGGRRGGR   mov.b   #11111111b,     &P2DIR          
+                mov.b   #10011001b,     &P2OUT
                 
 Delay_4         mov     #2000,          R15
 s_loop_4        mov     #200,           R14
@@ -57,11 +55,9 @@ ms_loop_4       nop
                 dec                     R15
                 jnz                     s_loop_4
                 
-                
                 jmp     Repeat_forever                  ; Endless loop
 
                 org     0xFFFE                          ; Pointer to main program
                 dw      main
-                ;dw     0xC000
                 
                 END

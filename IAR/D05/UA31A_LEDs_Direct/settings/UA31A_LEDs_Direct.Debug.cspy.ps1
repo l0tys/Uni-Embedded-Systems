@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.general.xcl" --backend -f "C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.general.xcl" --backend -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\User\Desktop\Embedded_Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31A_LEDs_Direct\settings\UA31A_LEDs_Direct.Debug.driver.xcl" 
 }

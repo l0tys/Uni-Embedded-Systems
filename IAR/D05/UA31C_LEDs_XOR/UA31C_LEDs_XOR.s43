@@ -1,13 +1,13 @@
                 #include "msp430.h"                     ; Main definitions
 
                 org     0xC000
-
+                
 main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
                 bic.b   #BIT7+BIT6,     &P2SEL          ; P2.6,7 - GPIOs
-
-LEDs_RRRRRRRR   mov.b   #11111111b,     &P2DIR          ; LEDs template ++++++++
-                mov.b   #11111111b,     &P2OUT          ; LEDs color    RRRRRRRR
-
+                
+LEDs_NNRGNNRG   mov.b   #11001100b,     &P2DIR          
+                mov.b   #01000100b,     &P2OUT          
+                
 Repeat_forever  
 
 Delay_1         mov     #2000,          R15
@@ -19,8 +19,9 @@ ms_loop_1       nop
                 dec                     R15
                 jnz                     s_loop_1
                 
-                xor.b   #01010101b,     &P2DIR          ; LED1=>2 and LED3=>4
-
+LEDs_RGRGRGRG   xor.b   #00110011b,     &P2DIR          
+                xor.b   #00010001b,     &P2OUT          
+                
 Delay_2         mov     #2000,          R15
 s_loop_2        mov     #200,           R14
 ms_loop_2       nop
@@ -30,13 +31,35 @@ ms_loop_2       nop
                 dec                     R15
                 jnz                     s_loop_2
                 
-                xor.b   #01010101b,     &P2DIR          ; LED2=>3 and LED3=>4
-                xor.b   #11111111b,     &P2OUT   
-                        
+LEDs_NNGRNNGR   xor.b   #00110011b,     &P2DIR          
+                xor.b   #11011101b,     &P2OUT         
+                
+Delay_3         mov     #2000,          R15
+s_loop_3        mov     #200,           R14
+ms_loop_3       nop
+                nop
+                dec                     R14
+                jnz                     ms_loop_3
+                dec                     R15
+                jnz                     s_loop_3
+                
+LEDs_RGGRRGGR   xor.b   #00110011b,     &P2DIR          
+                xor.b   #00010001b,     &P2OUT          
+                
+Delay_4         mov     #2000,          R15
+s_loop_4        mov     #200,           R14
+ms_loop_4       nop
+                nop
+                dec                     R14
+                jnz                     ms_loop_4
+                dec                     R15
+                jnz                     s_loop_4
+                
+LEDs_REPEAT     xor.b   #00110011b,     &P2DIR          
+                xor.b   #11011101b,     &P2OUT         
+                
                 jmp     Repeat_forever                  ; Endless loop
-
                 org     0xFFFE                          ; Pointer to main program
                 dw      main
-                ;dw     0xC000
                 
                 END
