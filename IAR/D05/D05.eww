@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\UA31A_LEDs_Direct\UA31A_LEDs_Direct.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\UA31C_LEDs_XOR\UA31C_LEDs_XOR.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\UA31D_LEDandPBs_if2_if2\UA31D_LEDandPBs_if2_if2.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>
