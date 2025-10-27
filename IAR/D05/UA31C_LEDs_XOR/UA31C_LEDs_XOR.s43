@@ -18,28 +18,26 @@ main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
                 bic.b   #BIT7+BIT6,     &P2SEL          ; P2.6,7 - GPIOs
                 
 LEDs_NNRGNNRG   mov.b   #11001100b,     &P2DIR          
-                mov.b   #01000100b,     &P2OUT          
+                mov.b   #01010101b,     &P2OUT          
                 
 Repeat_forever  
                 Delay         
                
-LEDs_RGRGRGRG   xor.b   #00110011b,     &P2DIR          
-                xor.b   #00010001b,     &P2OUT          
+LEDs_RGRGRGRG   xor.b   #00110011b,     &P2DIR         
                 
                 Delay
                 
 LEDs_NNGRNNGR   xor.b   #00110011b,     &P2DIR          
-                xor.b   #11011101b,     &P2OUT         
+                xor.b   #11001100b,     &P2OUT         
                 
                 Delay
                 
-LEDs_RGGRRGGR   xor.b   #00110011b,     &P2DIR          
-                xor.b   #00010001b,     &P2OUT          
+LEDs_RGGRRGGR   xor.b   #00110011b,     &P2DIR       
                 
                 Delay
                 
 LEDs_REPEAT     xor.b   #00110011b,     &P2DIR          
-                xor.b   #11011101b,     &P2OUT         
+                xor.b   #11001100b,     &P2OUT         
                 
                 jmp     Repeat_forever                  ; Endless loop
                 org     0xFFFE                          ; Pointer to main program

@@ -20,22 +20,20 @@ main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
 Repeat_forever  
 
 LEDs_NNRGNNRG   mov.b   #11001100b,     &P2DIR          
-                mov.b   #01000100b,     &P2OUT          
+                mov.b   #01010101b,     &P2OUT          
 
                 Delay
                 
-LEDs_RGRGRGRG   mov.b   #11111111b,     &P2DIR          
-                mov.b   #01010101b,     &P2OUT
+LEDs_RGRGRGRG   mov.b   #11111111b,     &P2DIR
 
                 Delay
 
 LEDs_NNGRNNGR   mov.b   #11001100b,     &P2DIR          
-                mov.b   #10001000b,     &P2OUT          
+                mov.b   #10011001b,     &P2OUT          
 
                 Delay
                 
-LEDs_RGGRRGGR   mov.b   #11111111b,     &P2DIR          
-                mov.b   #10011001b,     &P2OUT
+LEDs_RGGRRGGR   mov.b   #11111111b,     &P2DIR
                 
                 Delay
                 

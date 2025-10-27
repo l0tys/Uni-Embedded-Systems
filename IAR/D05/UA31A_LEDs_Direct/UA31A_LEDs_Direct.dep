@@ -5,28 +5,26 @@
     <configuration>
         <name>Debug</name>
         <outputs>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
             <file>$PROJ_DIR$\UA31A_LEDs_Direct.s43</file>
-            <file>$PROJ_DIR$\..\UA31C_LEDs_XOR\UA31C_LEDs_XOR.s43</file>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
-            <file>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</file>
             <file>$TOOLKIT_DIR$\inc\msp430.h</file>
             <file>$PROJ_DIR$\Debug\List\UA31A_LEDs_Direct.map</file>
             <file>$PROJ_DIR$\Debug\Obj\UA31A_LEDs_Direct.r43</file>
-            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-            <file>$PROJ_DIR$\..\UA31D_LEDandPBs_if2_if2\UA31D_LEDandPBs_if2_if2.s43</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
         </outputs>
         <file>
             <name>$PROJ_DIR$\UA31A_LEDs_Direct.s43</name>
             <outputs>
                 <tool>
                     <name>A430</name>
-                    <file> 6</file>
+                    <file> 4</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 4 7</file>
+                    <file> 2 0</file>
                 </tool>
             </inputs>
         </file>
@@ -35,13 +33,13 @@
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 5</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 2 6</file>
+                    <file> 6 4</file>
                 </tool>
             </inputs>
         </file>
@@ -50,7 +48,7 @@
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 3 5</file>
+                    <file> 5 3</file>
                 </tool>
             </outputs>
         </file>

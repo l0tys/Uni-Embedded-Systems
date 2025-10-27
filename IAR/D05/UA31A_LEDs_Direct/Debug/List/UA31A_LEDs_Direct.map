@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR UBROF Linker V10.15.2.1487                          27/Oct/2025  19:33:59
+# IAR UBROF Linker V10.15.2.1487                          27/Oct/2025  21:10:07
 # Copyright 1987-2023 IAR Systems AB.
 #
 #    Target Cpu    =  MSP430
@@ -77,8 +77,8 @@ main                       0xC000  Loc         UA31A_LEDs_Direct
 Repeat_forever             0xC00C  Loc         UA31A_LEDs_Direct
 LEDs_NNRGNNRG              0xC00C  Loc         UA31A_LEDs_Direct
 LEDs_RGRGRGRG              0xC02C  Loc         UA31A_LEDs_Direct
-LEDs_NNGRNNGR              0xC04A  Loc         UA31A_LEDs_Direct
-LEDs_RGGRRGGR              0xC06A  Loc         UA31A_LEDs_Direct
+LEDs_NNGRNNGR              0xC044  Loc         UA31A_LEDs_Direct
+LEDs_RGGRRGGR              0xC064  Loc         UA31A_LEDs_Direct
 
 [0] = Command line (linker generated)
 
@@ -109,12 +109,12 @@ File: C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31A_LEDs_Direct\Debug
         Repeat_forever   0xC00C  Loc
         LEDs_NNRGNNRG    0xC00C  Loc
         LEDs_RGRGRGRG    0xC02C  Loc
-        LEDs_NNGRNNGR    0xC04A  Loc
-        LEDs_RGGRRGGR    0xC06A  Loc
+        LEDs_NNGRNNGR    0xC044  Loc
+        LEDs_RGGRRGGR    0xC064  Loc
       Absolute code:
       Address         Size
       -------         ----
-      0xC000                0x8A
+      0xC000                0x7E
       0xFFFE                 0x2
 
 
@@ -126,10 +126,10 @@ File: C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31A_LEDs_Direct\Debug
 
 SEGMENT  SPACE    START/END ADDRESS      SIZE  TYPE  ALIGN
 -------  -----  ---------------------    ----  ----  -----
-                               0xC000  0xC089  0x8A   aseg
+                               0xC000  0xC07D  0x7E   aseg
                                0xFFFE  0xFFFF   0x2   aseg
 
- 0 bytes of CODE memory (+ 140 absolute )
+ 0 bytes of CODE memory (+ 128 absolute )
 
 Errors: none
 Warnings: none
