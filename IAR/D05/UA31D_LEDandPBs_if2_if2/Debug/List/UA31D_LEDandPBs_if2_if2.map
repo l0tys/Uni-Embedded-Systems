@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR UBROF Linker V10.15.2.1487                          26/Oct/2025  23:47:18
+# IAR UBROF Linker V10.15.2.1487                          27/Oct/2025  19:40:05
 # Copyright 1987-2023 IAR Systems AB.
 #
 #    Target Cpu    =  MSP430
@@ -69,18 +69,19 @@
 
 ENTRY              SPACE  ADDRESS  KIND  TYPE  MODULE
 -----              -----  -------  ----  ----  ------
-__MSP430G2203__            0x0000  Loc         UA31D_LEDandPBs_if2_if2
 _DATA20_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [0]
 _DATA16_HEAP_SIZE          0x0050  Pub         ?ABS_ENTRY_MOD [0]
 _STACK_SIZE                0x0050  Pub         ?ABS_ENTRY_MOD [0]
 main                       0xC000  Loc         UA31D_LEDandPBs_if2_if2
-Repeat_forever             0xC036  Loc         UA31D_LEDandPBs_if2_if2
-PB14off                    0xC03E  Loc         UA31D_LEDandPBs_if2_if2
-PB14off_PB15off            0xC046  Loc         UA31D_LEDandPBs_if2_if2
-PB14off_PB15on             0xC04E  Loc         UA31D_LEDandPBs_if2_if2
-PB14on                     0xC056  Loc         UA31D_LEDandPBs_if2_if2
-PB14on_PB15off             0xC05E  Loc         UA31D_LEDandPBs_if2_if2
-PB14on_PB15on              0xC06C  Loc         UA31D_LEDandPBs_if2_if2
+SET_PBs                    0xC006  Loc         UA31D_LEDandPBs_if2_if2
+P2_setup                   0xC012  Loc         UA31D_LEDandPBs_if2_if2
+Repeat_Forever             0xC01A  Loc         UA31D_LEDandPBs_if2_if2
+PB140ff                    0xC022  Loc         UA31D_LEDandPBs_if2_if2
+PB14off_PB15off            0xC02A  Loc         UA31D_LEDandPBs_if2_if2
+PB14off_PB15on             0xC038  Loc         UA31D_LEDandPBs_if2_if2
+PB14on                     0xC044  Loc         UA31D_LEDandPBs_if2_if2
+PB14on_PB15off             0xC04C  Loc         UA31D_LEDandPBs_if2_if2
+PB14on_PB15on              0xC05A  Loc         UA31D_LEDandPBs_if2_if2
 
 [0] = Command line (linker generated)
 
@@ -106,19 +107,20 @@ File: C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2
   Module: UA31D_LEDandPBs_if2_if2
 
       Absolute module symbols:
-        __MSP430G2203__  0x0000  Loc
         main             0xC000  Loc
-        Repeat_forever   0xC036  Loc
-        PB14on           0xC056  Loc
-        PB14off          0xC03E  Loc
-        PB14off_PB15on   0xC04E  Loc
-        PB14off_PB15off  0xC046  Loc
-        PB14on_PB15on    0xC06C  Loc
-        PB14on_PB15off   0xC05E  Loc
+        SET_PBs          0xC006  Loc
+        P2_setup         0xC012  Loc
+        Repeat_Forever   0xC01A  Loc
+        PB14on           0xC044  Loc
+        PB140ff          0xC022  Loc
+        PB14off_PB15on   0xC038  Loc
+        PB14off_PB15off  0xC02A  Loc
+        PB14on_PB15on    0xC05A  Loc
+        PB14on_PB15off   0xC04C  Loc
       Absolute code:
       Address         Size
       -------         ----
-      0xC000                0x7A
+      0xC000                0x68
       0xFFFE                 0x2
 
 
@@ -130,10 +132,10 @@ File: C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31D_LEDandPBs_if2_if2
 
 SEGMENT  SPACE    START/END ADDRESS      SIZE  TYPE  ALIGN
 -------  -----  ---------------------    ----  ----  -----
-                               0xC000  0xC079  0x7A   aseg
+                               0xC000  0xC067  0x68   aseg
                                0xFFFE  0xFFFF   0x2   aseg
 
- 0 bytes of CODE memory (+ 124 absolute )
+ 0 bytes of CODE memory (+ 106 absolute )
 
 Errors: none
 Warnings: none

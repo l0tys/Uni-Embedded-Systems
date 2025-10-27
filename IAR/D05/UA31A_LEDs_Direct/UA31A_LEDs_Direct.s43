@@ -1,5 +1,17 @@
                 #include "msp430.h"                     ; Main definitions
 
+Delay           MACRO
+                LOCAL   s_loop_1, ms_loop_1
+                mov     #2000,          R15
+s_loop_1        mov     #200,           R14
+ms_loop_1       nop
+                nop
+                dec                     R14
+                jnz                     ms_loop_1
+                dec                     R15
+                jnz                     s_loop_1
+                ENDM
+
                 org     0xC000
 
 main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
@@ -10,50 +22,22 @@ Repeat_forever
 LEDs_NNRGNNRG   mov.b   #11001100b,     &P2DIR          
                 mov.b   #01000100b,     &P2OUT          
 
-Delay_1         mov     #2000,          R15
-s_loop_1        mov     #200,           R14
-ms_loop_1       nop
-                nop
-                dec                     R14
-                jnz                     ms_loop_1
-                dec                     R15
-                jnz                     s_loop_1
+                Delay
                 
 LEDs_RGRGRGRG   mov.b   #11111111b,     &P2DIR          
                 mov.b   #01010101b,     &P2OUT
 
-Delay_2         mov     #2000,          R15
-s_loop_2        mov     #200,           R14
-ms_loop_2       nop
-                nop
-                dec                     R14
-                jnz                     ms_loop_2
-                dec                     R15
-                jnz                     s_loop_2
+                Delay
 
 LEDs_NNGRNNGR   mov.b   #11001100b,     &P2DIR          
                 mov.b   #10001000b,     &P2OUT          
 
-Delay_3         mov     #2000,          R15
-s_loop_3        mov     #200,           R14
-ms_loop_3       nop
-                nop
-                dec                     R14
-                jnz                     ms_loop_3
-                dec                     R15
-                jnz                     s_loop_3
+                Delay
                 
 LEDs_RGGRRGGR   mov.b   #11111111b,     &P2DIR          
                 mov.b   #10011001b,     &P2OUT
                 
-Delay_4         mov     #2000,          R15
-s_loop_4        mov     #200,           R14
-ms_loop_4       nop
-                nop
-                dec                     R14
-                jnz                     ms_loop_4
-                dec                     R15
-                jnz                     s_loop_4
+                Delay
                 
                 jmp     Repeat_forever                  ; Endless loop
 

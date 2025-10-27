@@ -5,9 +5,7 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\asm.s43</file>
             <file>$PROJ_DIR$\UA31E_LEDandPBs_if4.s43</file>
-            <file>$PROJ_DIR$\..\UA31D_LEDandPBs_if2_if2\UA31D_LEDandPBs_if2_if2.s43</file>
         </outputs>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>

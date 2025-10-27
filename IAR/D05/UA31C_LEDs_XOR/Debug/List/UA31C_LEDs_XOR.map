@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR UBROF Linker V10.15.2.1487                          26/Oct/2025  21:12:04
+# IAR UBROF Linker V10.15.2.1487                          27/Oct/2025  19:49:02
 # Copyright 1987-2023 IAR Systems AB.
 #
 #    Target Cpu    =  MSP430
@@ -76,21 +76,9 @@ _STACK_SIZE                0x0050  Pub         ?ABS_ENTRY_MOD [0]
 main                       0xC000  Loc         UA31C_LEDs_XOR
 LEDs_NNRGNNRG              0xC00C  Loc         UA31C_LEDs_XOR
 Repeat_forever             0xC018  Loc         UA31C_LEDs_XOR
-Delay_1                    0xC018  Loc         UA31C_LEDs_XOR
-s_loop_1                   0xC01C  Loc         UA31C_LEDs_XOR
-ms_loop_1                  0xC020  Loc         UA31C_LEDs_XOR
 LEDs_RGRGRGRG              0xC02C  Loc         UA31C_LEDs_XOR
-Delay_2                    0xC038  Loc         UA31C_LEDs_XOR
-s_loop_2                   0xC03C  Loc         UA31C_LEDs_XOR
-ms_loop_2                  0xC040  Loc         UA31C_LEDs_XOR
 LEDs_NNGRNNGR              0xC04C  Loc         UA31C_LEDs_XOR
-Delay_3                    0xC058  Loc         UA31C_LEDs_XOR
-s_loop_3                   0xC05C  Loc         UA31C_LEDs_XOR
-ms_loop_3                  0xC060  Loc         UA31C_LEDs_XOR
 LEDs_RGGRRGGR              0xC06C  Loc         UA31C_LEDs_XOR
-Delay_4                    0xC078  Loc         UA31C_LEDs_XOR
-s_loop_4                   0xC07C  Loc         UA31C_LEDs_XOR
-ms_loop_4                  0xC080  Loc         UA31C_LEDs_XOR
 LEDs_REPEAT                0xC08C  Loc         UA31C_LEDs_XOR
 
 [0] = Command line (linker generated)
@@ -121,21 +109,9 @@ File: C:\Users\User\Desktop\Uni-Embedded-Systems\IAR\D05\UA31C_LEDs_XOR\Debug\Ob
         main             0xC000  Loc
         LEDs_NNRGNNRG    0xC00C  Loc
         Repeat_forever   0xC018  Loc
-        Delay_1          0xC018  Loc
-        s_loop_1         0xC01C  Loc
-        ms_loop_1        0xC020  Loc
         LEDs_RGRGRGRG    0xC02C  Loc
-        Delay_2          0xC038  Loc
-        s_loop_2         0xC03C  Loc
-        ms_loop_2        0xC040  Loc
         LEDs_NNGRNNGR    0xC04C  Loc
-        Delay_3          0xC058  Loc
-        s_loop_3         0xC05C  Loc
-        ms_loop_3        0xC060  Loc
         LEDs_RGGRRGGR    0xC06C  Loc
-        Delay_4          0xC078  Loc
-        s_loop_4         0xC07C  Loc
-        ms_loop_4        0xC080  Loc
         LEDs_REPEAT      0xC08C  Loc
       Absolute code:
       Address         Size
