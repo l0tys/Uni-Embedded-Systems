@@ -17,32 +17,30 @@ Repeat_forever
 Test_PBs        mov.b   &P1IN,          R4              ; Temporary storage for P1IN
                 bic.b   #11001111b,     R4              ; Clear other bits
 
-                cmp     #00110000b,     R4              ; Identify state when 
-                jz                      PB14off_PB15off ; Both PB14, PB15 are off
-
-                cmp     #00100000b,     R4              ; Identify state when 
-                jz                      PB14on_PB15off  ; Only PB14 is on
-
-                cmp     #00010000b,     R4              ; Identify state when 
-                jz                      PB14off_PB15on  ; Only PB15 is on
-
-                cmp     #00000000b,     R4              ; Identify state when 
-                jz                      PB14on_PB15on   ; Both PB14, PB15 are on
-
-PB14off_PB15off mov.b   #11001100b,     &P2DIR
+                cmp     #00110000b,     R4              ; Skip when PB14 and PB15
+                jnz                     not_14off_15off ; Not off
+                mov.b   #11001100b,     &P2DIR
                 mov.b   #01000100b,     &P2OUT
-                jmp     Repeat_forever                  ; Endless loop
+not_14off_15off nop
 
-PB14on_PB15off  mov.b   #11111111b,     &P2DIR
+                cmp     #00100000b,     R4              ; Skip when PB14
+                jnz                     not_14on_15off  ; Not on
+                mov.b   #11111111b,     &P2DIR
                 mov.b   #01010101b,     &P2OUT
-                jmp     Repeat_forever                  ; Endless loop
+not_14on_15off  nop
 
-PB14off_PB15on  mov.b   #11001100b,     &P2DIR
+                cmp     #00010000b,     R4              ; Skip when PB15
+                jnz                     not_14off_15on  ; Not on
+                mov.b   #11001100b,     &P2DIR
                 mov.b   #10001000b,     &P2OUT
-                jmp     Repeat_forever                  ; Endless loop
+not_14off_15on  nop
 
-PB14on_PB15on   mov.b   #11111111b,     &P2DIR
+                cmp     #00000000b,     R4              ; Skip when PB14 and PB15
+                jnz                     not_14on_15on   ; Not on
+                mov.b   #11111111b,     &P2DIR
                 mov.b   #10011001b,     &P2OUT
+not_14on_15on   nop
+
                 jmp     Repeat_forever                  ; Endless loop
 
                 org     0xFFFE                          ; Pointer to main program

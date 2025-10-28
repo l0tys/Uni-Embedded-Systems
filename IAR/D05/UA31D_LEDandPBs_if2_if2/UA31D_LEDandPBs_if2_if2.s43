@@ -18,23 +18,23 @@ Repeat_forever  bit.b   #BIT4,          &P1IN
 PB14off         bit.b   #BIT5,          &P1IN
                 jz                      PB14off_PB15on
                 
-PB14off_PB15off mov.b   #11111111b,     &P2DIR
-                mov.b   #11111111b,     &P2OUT
+PB14off_PB15off mov.b   #11001100b,     &P2DIR
+                mov.b   #01000100b,     &P2OUT
                 jmp     Repeat_forever                  ; Endless loop
 
-PB14off_PB15on  mov.b   #11111111b,     &P2DIR
-                mov.b   #00000000b,     &P2OUT
+PB14off_PB15on  mov.b   #11001100b,     &P2DIR
+                mov.b   #10001000b,     &P2OUT
                 jmp     Repeat_forever                  ; Endless loop
 
 PB14on          bit.b   #BIT5,          &P1IN
                 jz                      PB14on_PB15on
                 
-PB14on_PB15off  mov.b   #10101010b,     &P2DIR
-                mov.b   #11111111b,     &P2OUT
+PB14on_PB15off  mov.b   #11111111b,     &P2DIR
+                mov.b   #01010101b,     &P2OUT
                 jmp     Repeat_forever                  ; Endless loop
 
-PB14on_PB15on   mov.b   #01010101b,     &P2DIR
-                mov.b   #00000000b,     &P2OUT
+PB14on_PB15on   mov.b   #11111111b,     &P2DIR
+                mov.b   #10011001b,     &P2OUT
                 jmp     Repeat_forever                  ; Endless loop
 
                 org     0xFFFE                          ; Pointer to main program
