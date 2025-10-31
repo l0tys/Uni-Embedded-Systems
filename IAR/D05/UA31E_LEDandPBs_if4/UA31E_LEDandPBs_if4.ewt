@@ -2630,6 +2630,9 @@
         </settings>
     </configuration>
     <file>
+        <name>$PROJ_DIR$\UA31E_LEDandPBs_if4.s43</name>
+    </file>
+    <file>
         <name>$PROJ_DIR$\UA31E_LEDandPBs_if4_MkII.s43</name>
     </file>
 </project>

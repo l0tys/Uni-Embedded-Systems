@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>825002699</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\UA31W_LEDandPBs_addPC_jmp.map</file>
+            <file>$PROJ_DIR$\asm.s43</file>
+            <file>$PROJ_DIR$\..\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4.s43</file>
+            <file>$PROJ_DIR$\..\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4_MkII.s43</file>
+            <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</file>
+            <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp.s43</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31W_LEDandPBs_addPC_jmp.r43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$PROJ_DIR$\..\UA31D_LEDandPBs_if2_if2\UA31D_LEDandPBs_if2_if2.s43</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 7 2</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 1 9</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp.s43</name>
+            <outputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 9</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 10 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

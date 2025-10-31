@@ -6,13 +6,14 @@ main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
                 ; Setup GPIOs for Port P2 (LEDs)
                 bic.b   #BIT7+BIT6,     &P2SEL          ; P2.6,7 - GPIOs
 
-                ;Setup GPIOs for Port P1 (Push buttons)
+                ; Setup GPIOs for Port P1 (Push buttons)
                 bic.b   #BIT5+BIT4,     &P1SEL
                 bic.b   #BIT5+BIT4,     &P1DIR          ; P1.4,5 - inputs
                 bis.b   #BIT5+BIT4,     &P1OUT          ; Attach pull-up
                 bis.b   #BIT5+BIT4,     &P1REN          ; Resistors at P1.4,5
                 
-Repeat_forever  bit.b   #BIT4,          &P1IN
+Repeat_forever  
+                bit.b   #BIT4,          &P1IN
                 jz                      PB14on
                 
 PB14off         bit.b   #BIT5,          &P1IN

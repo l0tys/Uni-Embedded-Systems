@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>3017258876</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\Debug\Obj\UA31W_LEDandPBs_addPC_16bytes.r43</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31V_LEDandPBs_addPC_16bytes.d43</file>
+            <file>$PROJ_DIR$\..\UA31D_LEDandPBs_if2_if2\UA31D_LEDandPBs_if2_if2.s43</file>
+            <file>$PROJ_DIR$\..\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4.s43</file>
+            <file>$PROJ_DIR$\..\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4_MkII.s43</file>
+            <file>$PROJ_DIR$\asm.s43</file>
+            <file>$PROJ_DIR$\..\UA31C_LEDs_XOR\UA31C_LEDs_XOR.s43</file>
+            <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_16bytes.s43</file>
+            <file>$PROJ_DIR$\..\UA31W_LEDandPBs_addPC_jmp\UA31W_LEDandPBs_addPC_jmp.s43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
+            <file>$PROJ_DIR$\Debug\List\UA31V_LEDandPBs_addPC_16bytes.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31V_LEDandPBs_addPC_16bytes.r43</file>
+            <file>$PROJ_DIR$\UA31V_LEDandPBs_addPC_16bytes.s43</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\UA31V_LEDandPBs_addPC_16bytes.d43</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 12</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 11 13</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\UA31W_LEDandPBs_addPC_16bytes.s43</name>
+            <outputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 0</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 9 10</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 1 12</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\UA31V_LEDandPBs_addPC_16bytes.s43</name>
+            <outputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 13</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 9 10</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

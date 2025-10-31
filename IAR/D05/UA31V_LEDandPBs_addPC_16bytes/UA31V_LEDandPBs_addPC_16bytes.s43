@@ -1,0 +1,45 @@
+                #include "msp430.h"                     ; Main definitions
+
+                org     0xC000
+
+main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
+                ; Setup GPIOs for Port P2 (LEDs)
+                bic.b   #BIT7+BIT6,     &P2SEL          ; P2.6,7 - GPIOs
+
+                ; Setup GPIOs for Port P1 (Push buttons)
+                bic.b   #BIT5+BIT4,     &P1SEL
+                bic.b   #BIT5+BIT4,     &P1DIR          ; P1.4,5 - inputs
+                bis.b   #BIT5+BIT4,     &P1OUT          ; Attach pull-up
+                bis.b   #BIT5+BIT4,     &P1REN          ; Resistors at P1.4,5
+                
+Repeat_forever  
+                mov.b   &P1IN,          R4              ; Make a copy of P1IN
+                bic     #1111111111001111b,R4           ; R4 = 0,16,32,48
+                                                        ; BIT4 and BIT5
+                add     R4,             PC              ; jump by 0,16,32,48 forward
+
+PB14on_PB15on   mov.b   #11111111b,     &P2DIR
+                mov.b   #10011001b,     &P2OUT
+                nop
+                nop
+                jmp     Repeat_forever                  ; Endless loop
+
+PB14off_PB15on  mov.b   #11001100b,     &P2DIR
+                mov.b   #10001000b,     &P2OUT
+                nop
+                jmp     Repeat_forever                  ; Endless loop
+
+PB14on_PB15off  mov.b   #11111111b,     &P2DIR
+                mov.b   #01010101b,     &P2OUT
+                nop
+                nop
+                jmp     Repeat_forever                  ; Endless loop
+                
+PB14off_PB15off mov.b   #11001100b,     &P2DIR
+                mov.b   #01000100b,     &P2OUT
+                jmp     Repeat_forever                  ; Endless loop
+
+                org     0xFFFE                          ; Pointer to main program
+                dw      main
+                
+                END

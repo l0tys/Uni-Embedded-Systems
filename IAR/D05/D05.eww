@@ -12,5 +12,14 @@
     <project>
         <path>$WS_DIR$\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\UA31G_LEDandPBs_PBFunction\UA31G_LEDandPBs_PBFunction.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\UA31V_LEDandPBs_addPC_16bytes\UA31V_LEDandPBs_addPC_16bytes.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\UA31W_LEDandPBs_addPC_jmp\UA31W_LEDandPBs_addPC_jmp.ewp</path>
+    </project>
     <batchBuild />
 </workspace>
