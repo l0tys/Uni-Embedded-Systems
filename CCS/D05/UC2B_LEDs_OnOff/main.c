@@ -11,24 +11,28 @@ void main(void)
     P2OUT = 0b01010101;
 
     for (;;) {
-        _delay_cycles(2000000);
+        Delay();
 
         P2DIR |= 0b00110011;
 
-        _delay_cycles(2000000);
+        Delay();
 
         P2DIR &= ~0b00110011;
         P2OUT &= ~0b11011101;
         P2OUT |= 0b10011001;
 
-        _delay_cycles(2000000);
+        Delay();
 
         P2DIR |= 0b00110011;
 
-        _delay_cycles(2000000);
+        Delay();
 
         P2DIR &= ~0b00110011;
         P2OUT &= ~0b10011001;
         P2OUT |= 0b01010101;
     }
+}
+
+void Delay(void) {
+    _delay_cycles(2000000);
 }

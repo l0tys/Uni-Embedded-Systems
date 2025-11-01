@@ -77,6 +77,15 @@
                 "name": "UC2H_LEDandPBs_PBLock",
                 "resourceId": "/UC2H_LEDandPBs_PBLock"
             }
+        },
+        {
+            "name": "UC2I_LEDandPBs_LEDandFN1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2I_LEDandPBs_LEDandFN1",
+                "resourceId": "/UC2I_LEDandPBs_LEDandFN1"
+            }
         }
     ]
 }

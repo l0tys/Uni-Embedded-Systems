@@ -10,16 +10,20 @@ void main(void)
     for (;;) {
         P2DIR = 0b11001100;
         P2OUT = 0b01010101;
-        _delay_cycles(2000000);
+        Delay();
 
         P2DIR = 0b11111111;
-        _delay_cycles(2000000);
+        Delay();
 
         P2DIR = 0b11001100;
         P2OUT = 0b10011001;
-        _delay_cycles(2000000);
+        Delay();
 
         P2DIR = 0b11111111;
-        _delay_cycles(2000000);
+        Delay();
     }
+}
+
+void Delay(void) {
+    _delay_cycles(2000000);
 }

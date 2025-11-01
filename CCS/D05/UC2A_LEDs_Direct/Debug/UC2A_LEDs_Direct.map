@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker PC v21.6.1                     
 ******************************************************************************
->> Linked Sat Nov  1 02:00:58 2025
+>> Linked Sun Nov  2 00:37:31 2025
 
 OUTPUT FILE NAME:   <UC2A_LEDs_Direct.out>
-ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 0000c0a4
+ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 0000c062
 
 
 MEMORY CONFIGURATION
@@ -19,7 +19,7 @@ MEMORY CONFIGURATION
   INFOC                 00001040   00000040  00000000  00000040  RWIX
   INFOB                 00001080   00000040  00000000  00000040  RWIX
   INFOA                 000010c0   00000040  00000000  00000040  RWIX
-  FLASH                 0000c000   00003fde  000000ca  00003f14  RWIX
+  FLASH                 0000c000   00003fde  00000088  00003f56  RWIX
   BSLSIGNATURE          0000ffde   00000002  00000002  00000000  RWIX  ffff 
   INT00                 0000ffe0   00000002  00000002  00000000  RWIX
   INT01                 0000ffe2   00000002  00000000  00000002  RWIX
@@ -48,12 +48,13 @@ section   page    origin      length       input sections
                   000003b0    00000002     rts430_eabi.lib : boot.c.obj (.stack)
                   000003b2    0000004e     --HOLE--
 
-.text      0    0000c000    000000ca     
-                  0000c000    000000a4     main.obj (.text:main)
-                  0000c0a4    00000014     rts430_eabi.lib : boot.c.obj (.text:_c_int00_noinit_noargs)
-                  0000c0b8    00000008                     : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
-                  0000c0c0    00000006                     : exit.c.obj (.text:abort)
-                  0000c0c6    00000004                     : pre_init.c.obj (.text:_system_pre_init)
+.text      0    0000c000    00000088     
+                  0000c000    00000044     main.obj (.text:main)
+                  0000c044    0000001e     main.obj (.text:Delay)
+                  0000c062    00000014     rts430_eabi.lib : boot.c.obj (.text:_c_int00_noinit_noargs)
+                  0000c076    00000008                     : isr_trap.asm.obj (.text:_isr:__TI_ISR_TRAP)
+                  0000c07e    00000006                     : exit.c.obj (.text:abort)
+                  0000c084    00000004                     : pre_init.c.obj (.text:_system_pre_init)
 
 .cinit     0    0000c000    00000000     
 
@@ -119,9 +120,9 @@ MODULE SUMMARY
        Module             code   ro data   rw data
        ------             ----   -------   -------
     .\
-       main.obj           164    0         0      
+       main.obj           98     0         0      
     +--+------------------+------+---------+---------+
-       Total:             164    0         0      
+       Total:             98     0         0      
                                                   
     C:\ti\ccs2030\ccs\tools\compiler\ti-cgt-msp430_21.6.1.LTS\lib\rts430_eabi.lib
        boot.c.obj         20     2         0      
@@ -146,7 +147,7 @@ MODULE SUMMARY
                                                   
        Stack:             0      0         80     
     +--+------------------+------+---------+---------+
-       Grand Total:       202    28        80     
+       Grand Total:       136    28        80     
 
 
 GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
@@ -163,7 +164,7 @@ address   name
 00000057  BCSCTL1               
 00000058  BCSCTL2               
 00000053  BCSCTL3               
-0000c0c0  C$$EXIT               
+0000c07e  C$$EXIT               
 00000059  CACTL1                
 0000005a  CACTL2                
 000010fb  CALBC1_12MHZ          
@@ -176,6 +177,7 @@ address   name
 000010fc  CALDCO_8MHZ           
 0000005b  CAPD                  
 00000056  DCOCTL                
+0000c044  Delay                 
 00000128  FCTL1                 
 0000012a  FCTL2                 
 0000012c  FCTL3                 
@@ -257,7 +259,7 @@ address   name
 0000c000  __TI_CINIT_Base       
 0000c000  __TI_CINIT_Limit      
 0000c000  __TI_CINIT_Warm       
-0000c0b8  __TI_ISR_TRAP         
+0000c076  __TI_ISR_TRAP         
 0000ffe0  __TI_int00            
 0000ffe4  __TI_int02            
 0000ffe6  __TI_int03            
@@ -275,11 +277,11 @@ ffffffff  __TI_pprof_out_hndl
 ffffffff  __TI_prof_data_size   
 ffffffff  __TI_prof_data_start  
 ffffffff  __c_args__            
-0000c0a4  _c_int00_noinit_noargs
+0000c062  _c_int00_noinit_noargs
 0000fffe  _reset_vector         
 000003b0  _stack                
-0000c0c6  _system_pre_init      
-0000c0c0  abort                 
+0000c084  _system_pre_init      
+0000c07e  abort                 
 0000c000  main                  
 
 
@@ -392,11 +394,12 @@ address   name
 0000c000  __TI_CINIT_Limit      
 0000c000  __TI_CINIT_Warm       
 0000c000  main                  
-0000c0a4  _c_int00_noinit_noargs
-0000c0b8  __TI_ISR_TRAP         
-0000c0c0  C$$EXIT               
-0000c0c0  abort                 
-0000c0c6  _system_pre_init      
+0000c044  Delay                 
+0000c062  _c_int00_noinit_noargs
+0000c076  __TI_ISR_TRAP         
+0000c07e  C$$EXIT               
+0000c07e  abort                 
+0000c084  _system_pre_init      
 0000ffe0  __TI_int00            
 0000ffe4  __TI_int02            
 0000ffe6  __TI_int03            
@@ -416,4 +419,4 @@ ffffffff  __TI_prof_data_size
 ffffffff  __TI_prof_data_start  
 ffffffff  __c_args__            
 
-[128 symbols]
+[129 symbols]
