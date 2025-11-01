@@ -4,7 +4,8 @@ void main(void)
 {
     WDTCTL = WDTPW | WDTHOLD;
 
-    P2SEL = 0b00000000;
+    P2SEL &= ~(BIT7 + BIT6);
+    P2SEL2 &= ~(BIT7 + BIT6);
 
     P2DIR = 0b11001100;
     P2OUT = 0b01010101;

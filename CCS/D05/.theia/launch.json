@@ -32,6 +32,33 @@
                 "name": "UC2C_LEDs_XOR",
                 "resourceId": "/UC2C_LEDs_XOR"
             }
+        },
+        {
+            "name": "UC2D_LEDandPBs_if2_if2",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2D_LEDandPBs_if2_if2",
+                "resourceId": "/UC2D_LEDandPBs_if2_if2"
+            }
+        },
+        {
+            "name": "UC2E_LEDandPBs_if4",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2E_LEDandPBs_if4",
+                "resourceId": "/UC2E_LEDandPBs_if4"
+            }
+        },
+        {
+            "name": "UC2F_LEDandPBs_Switch",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2F_LEDandPBs_Switch",
+                "resourceId": "/UC2F_LEDandPBs_Switch"
+            }
         }
     ]
 }

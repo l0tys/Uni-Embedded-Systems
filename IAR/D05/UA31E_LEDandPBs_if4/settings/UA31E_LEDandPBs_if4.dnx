@@ -58,7 +58,7 @@
         <Counter1>0000000000000000000000000000000000000000000000000000000000000000</Counter1>
     </EEM_Cycle_Counter_1>
     <DebugChecksum>
-        <Checksum>2896456006</Checksum>
+        <Checksum>1000709599</Checksum>
     </DebugChecksum>
     <Disassembly>
         <MixedMode>1</MixedMode>
@@ -66,6 +66,11 @@
     <CallStack>
         <ShowArgs>0</ShowArgs>
     </CallStack>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
+        <Category2>_ 2</Category2>
+    </LogFile>
     <PowerLog>
         <GraphEnabled>0</GraphEnabled>
         <LogEnabled>0</LogEnabled>
@@ -92,11 +97,6 @@
         <Probe2>Energy</Probe2>
         <ProbeSetup2>4 1 1 10 0 0</ProbeSetup2>
     </PowerProbe>
-    <LogFile>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
-        <Category2>_ 2</Category2>
-    </LogFile>
     <Breakpoints2>
         <Count>0</Count>
     </Breakpoints2>

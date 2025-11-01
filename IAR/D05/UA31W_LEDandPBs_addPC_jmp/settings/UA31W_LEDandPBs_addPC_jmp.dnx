@@ -46,7 +46,7 @@
         <FreqHi>0</FreqHi>
     </Simulator>
     <DebugChecksum>
-        <Checksum>2845734048</Checksum>
+        <Checksum>2556831252</Checksum>
     </DebugChecksum>
     <Disassembly>
         <MixedMode>1</MixedMode>
@@ -66,11 +66,6 @@
     <CallStack>
         <ShowArgs>0</ShowArgs>
     </CallStack>
-    <LogFile>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
-        <Category2>_ 2</Category2>
-    </LogFile>
     <Registers>
         <regBase0>P1IN 2</regBase0>
     </Registers>
@@ -100,6 +95,11 @@
         <Probe2>Energy</Probe2>
         <ProbeSetup2>4 1 1 10 0 0</ProbeSetup2>
     </PowerProbe>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
+        <Category2>_ 2</Category2>
+    </LogFile>
     <Breakpoints2>
         <Count>0</Count>
     </Breakpoints2>
