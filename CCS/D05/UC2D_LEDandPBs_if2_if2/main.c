@@ -12,8 +12,8 @@ void main(void)
     P1REN |= BIT5 + BIT4;
 
     for (;;) {
-        if (~(P1IN) & BIT4) {
-          if (~(P1IN) & BIT5) {
+        if (~P1IN & BIT4) {
+          if (~P1IN & BIT5) {
             P2DIR = 0b11111111;
             P2OUT = 0b10011001;
           } else {
@@ -21,7 +21,7 @@ void main(void)
             P2OUT = 0b01010101;
           }
         } else {
-          if (~(P1IN) & BIT5) {
+          if (~P1IN & BIT5) {
             P2DIR = 0b11001100;
             P2OUT = 0b10001000;
           } else {

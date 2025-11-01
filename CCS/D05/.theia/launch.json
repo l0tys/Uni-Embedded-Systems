@@ -59,6 +59,24 @@
                 "name": "UC2F_LEDandPBs_Switch",
                 "resourceId": "/UC2F_LEDandPBs_Switch"
             }
+        },
+        {
+            "name": "UC2G_LEDandPBs_PBFunction",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2G_LEDandPBs_PBFunction",
+                "resourceId": "/UC2G_LEDandPBs_PBFunction"
+            }
+        },
+        {
+            "name": "UC2H_LEDandPBs_PBLock",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2H_LEDandPBs_PBLock",
+                "resourceId": "/UC2H_LEDandPBs_PBLock"
+            }
         }
     ]
 }
