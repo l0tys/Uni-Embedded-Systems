@@ -86,6 +86,24 @@
                 "name": "UC2I_LEDandPBs_LEDandFN1",
                 "resourceId": "/UC2I_LEDandPBs_LEDandFN1"
             }
+        },
+        {
+            "name": "UC2X_LEDandPBs_PBLockIRQ",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2X_LEDandPBs_PBLockIRQ",
+                "resourceId": "/UC2X_LEDandPBs_PBLockIRQ"
+            }
+        },
+        {
+            "name": "UC2W_LEDandPBs_PBLockIRQ_Mk2",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC2W_LEDandPBs_PBLockIRQ_Mk2",
+                "resourceId": "/UC2W_LEDandPBs_PBLockIRQ_Mk2"
+            }
         }
     ]
 }

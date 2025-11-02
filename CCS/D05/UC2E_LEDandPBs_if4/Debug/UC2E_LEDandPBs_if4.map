@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v21.6.1                     
 ******************************************************************************
->> Linked Sat Nov  1 02:17:55 2025
+>> Linked Sun Nov  2 15:14:02 2025
 
 OUTPUT FILE NAME:   <UC2E_LEDandPBs_if4.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 0000c082

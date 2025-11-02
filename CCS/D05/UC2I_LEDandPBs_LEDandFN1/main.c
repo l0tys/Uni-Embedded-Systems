@@ -4,30 +4,30 @@ char P2OUT_tmp, P2DIR_tmp;
 
 void main(void)
 {
-    WDTCTL = WDTPW | WDTHOLD;
+  WDTCTL = WDTPW | WDTHOLD;
 
-    P2SEL &= ~(BIT7 + BIT6);
-    P2SEL2 &= ~(BIT7 + BIT6);
+  P2SEL &= ~(BIT7 + BIT6);
+  P2SEL2 &= ~(BIT7 + BIT6);
 
-    P1DIR &= ~(BIT5 + BIT4);
-    P1OUT |= BIT5 + BIT4;
-    P1REN |= BIT5 + BIT4;
+  P1DIR &= ~(BIT5 + BIT4);
+  P1OUT |= BIT5 + BIT4;
+  P1REN |= BIT5 + BIT4;
 
-    for (;;) {
-        P2DIR_tmp = 0b11001100;
-        P2OUT_tmp = 0b01010101;
-        Delay();
+  for (;;) {
+      P2DIR_tmp = 0b11001100;
+      P2OUT_tmp = 0b01010101;
+      Delay();
 
-        P2DIR_tmp = 0b11111111;
-        Delay();
+      P2DIR_tmp = 0b11111111;
+      Delay();
 
-        P2DIR_tmp = 0b11001100;
-        P2OUT_tmp = 0b10011001;
-        Delay();
+      P2DIR_tmp = 0b11001100;
+      P2OUT_tmp = 0b10011001;
+      Delay();
 
-        P2DIR_tmp = 0b11111111;
-        Delay();
-    }
+      P2DIR_tmp = 0b11111111;
+      Delay();
+  }
 }
 
 void Delay(void) {
