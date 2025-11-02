@@ -1,0 +1,45 @@
+                #include "msp430.h"                     ; Main definitions
+
+                org     0xC000
+
+main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
+
+                mov     #0x0400,        SP              ; Initialise stack
+                
+                mov     #0x4444,        R4              ; Fill registers
+                mov     #0x5555,        R5
+                mov     #0x6666,        R6
+                mov     #0x7777,        R7
+                
+                mov     #0x8888,        &0x03D0         ; Fill RAM
+                mov     #0x9999,        &0x03D2
+                mov     #0xAAAA,        &0x03D4
+                mov     #0xBBBB,        &0x03D6
+                
+                mov     #0x03D4,        R8              ; Pointer to 3rd RAM
+                
+Repeat_forever  
+                push    R4                              ; Save R4 to stack
+                push    R5                              ; Save R5 to stack
+                push    #0x1111                         ; Save 1111 to stack
+                push.b  R6                              ; Save by of R6 to stack
+                push    &0x03D0                         ; Save RAM1 to stack
+                push.b  &0x03D2                         ; Save byte of RAM2 to stack
+                push    @R8+                            ; Save RAM3 to stack indirectly
+                push    @R8                             ; Save RAM4 to stack indirectly
+
+                pop     R4
+                pop     R5
+                pop.b   R6
+                pop     R7
+                pop     &0x03D0
+                pop     &0x03D2
+                pop     &0x03D4
+                pop     &0x03D6
+
+                jmp     Repeat_forever                  ; Endless loop
+
+                org     0xFFFE                          ; Pointer to main program
+                dw      main
+                
+                END

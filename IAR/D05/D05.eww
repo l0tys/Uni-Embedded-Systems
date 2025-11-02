@@ -21,5 +21,8 @@
     <project>
         <path>$WS_DIR$\UA31W_LEDandPBs_addPC_jmp\UA31W_LEDandPBs_addPC_jmp.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\UA40_Test_Stack\UA40_Test_Stack.ewp</path>
+    </project>
     <batchBuild />
 </workspace>
