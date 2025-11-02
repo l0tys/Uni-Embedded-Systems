@@ -35,47 +35,24 @@ void Delay(void) {
 
   for (i=100; i>0; i--) {
     switch (P1IN & (BIT5 + BIT4)) {
-      case (0b001100000):
+      case (0b00110000):
         P2DIR = P2DIR_tmp;
         P2OUT = P2OUT_tmp;
         break;
-      case (0b001000000):
-        P2OUT = P2OUT_tmp;
-        P2DIR = P2DIR_tmp & 0b00111100;
+      case (0b00100000):
+        P2DIR = P2DIR_tmp | 0b11000011;
+        P2OUT = P2OUT_tmp | 0b11000011;
         break;
-      case (0b000100000):
-        P2OUT = P2OUT_tmp;
+      case (0b00010000):
         P2DIR = P2DIR_tmp & 0b11000011;
-        break;
-      case (0b000000000):
         P2OUT = P2OUT_tmp;
-        P2DIR = 0b00000000;
+        break;
+      case (0b00000000):
+        P2DIR = 0b11000011;
+        P2OUT = 0b11000011;
         break;
     } 
+
+    _delay_cycles(20000);
   }
-
-  _delay_cycles(20000);
 }
-
-// void Delay(void) {
-//   switch (P1IN & (BIT5 + BIT4)) {
-//     case (0b001100000):
-//       P2DIR = P2DIR_tmp;
-//       P2OUT = P2OUT_tmp;
-//       break;
-//   //   case (0b001000000):
-//   //     P2OUT = P2OUT_tmp;
-//   //     P2DIR = P2DIR_tmp & 0b00111100;
-//   //     break;
-//   //   case (0b000100000):
-//   //     P2OUT = P2OUT_tmp;
-//   //     P2DIR = P2DIR_tmp & 0b11000011;
-//   //     break;
-//   //   case (0b000000000):
-//   //     P2OUT = P2OUT_tmp;
-//   //     P2DIR = 0b00000000;
-//   //     break;
-//   } 
-
-//   _delay_cycles(2000000);
-// }
