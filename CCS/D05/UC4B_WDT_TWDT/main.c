@@ -1,17 +1,34 @@
 #include <msp430.h>
 
+int i;
+
 void main(void) {
-  WDTCTL = WDTPW + WDTHOLD;                 // Stop watchdog timer
+  // Timer mode with SMCLK and WDTI=512
+  WDTCTL = WDTPW + WDTTMSEL + WDTIS1 + WDTCNTCL;     
 
   P1DIR |= BIT6 + BIT0;                     // Enable LEDs
   P1OUT |= BIT6;                            // Green LED on
   P1OUT &= ~BIT0;                           // Red LED off
 
-  DCOCTL = 1 * 32;                          // DCO = 1 w/o modulation
-  BCSCTL1 |= (RSEL3 | RSEL2 | RSEL1);
+  DCOCTL = 0 * 32;                          // DCO = 0 w/o modulation
+  BCSCTL1 = (BCSCTL1 & 0b11110000) | RSEL0; // Force RSEL=1
 
-  while (1) {
+  IE1 |= WDTIE;                             // Enable WDT interrupts
+  IFG1 &= ~WDTIFG;                          // Avoid dummy interrupt
+
+  i = 1200;
+
+  _BIS_SR(CPUOFF+GIE);
+}
+
+#pragma vector=WDT_VECTOR
+__interrupt void My_WDT(void) {
+  IFG1 &= ~WDTIFG;                          // Avoid dummy interrupt
+
+  if (i > 0) {
+    i--;
+  } else {
+    i = 1200;
     P1OUT ^= (BIT6 + BIT0);                 // Toggle both LEDs
-    _delay_cycles(119200000 / 2);
   }
 }

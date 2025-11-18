@@ -122,6 +122,15 @@
                 "name": "UC3C_DIVM",
                 "resourceId": "/UC3C_DIVM"
             }
+        },
+        {
+            "name": "UC4B_WDT_TWDT",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC4B_WDT_TWDT",
+                "resourceId": "/UC4B_WDT_TWDT"
+            }
         }
     ]
 }
