@@ -5,31 +5,26 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\..\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4.s43</file>
-            <file>$PROJ_DIR$\UA40_Test_Stack</file>
-            <file>$PROJ_DIR$\asm.s43</file>
-            <file>$PROJ_DIR$\..\UA31W_LEDandPBs_addPC_jmp\UA31W_LEDandPBs_addPC_jmp.s43</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA40_Test_Stack.d43</file>
+            <file>$PROJ_DIR$\Debug\List\UA40_Test_Stack.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA40_Test_Stack.r43</file>
             <file>$PROJ_DIR$\UA40_Test_Stack.s43</file>
             <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA40_Test_Stack.r43</file>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
             <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-            <file>$PROJ_DIR$\Debug\List\UA40_Test_Stack.map</file>
-            <file>$PROJ_DIR$\Debug\Exe\UA40_Test_Stack.d43</file>
-            <file>$PROJ_DIR$\..\UA31G_LEDandPBs_PBFunction\UA31G_LEDandPBs_PBFunction.s43</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\UA40_Test_Stack.s43</name>
+            <name>$PROJ_DIR$\Debug\Exe\UA40_Test_Stack.d43</name>
             <outputs>
                 <tool>
-                    <name>A430</name>
-                    <file> 6</file>
+                    <name>XLINK</name>
+                    <file> 1</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>A430</name>
-                    <file> 8 5</file>
+                    <name>XLINK</name>
+                    <file> 6 2</file>
                 </tool>
             </inputs>
         </file>
@@ -38,22 +33,22 @@
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 10 9</file>
+                    <file> 0 1</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\UA40_Test_Stack.d43</name>
+            <name>$PROJ_DIR$\UA40_Test_Stack.s43</name>
             <outputs>
                 <tool>
-                    <name>XLINK</name>
-                    <file> 9</file>
+                    <name>A430</name>
+                    <file> 2</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>XLINK</name>
-                    <file> 7 6</file>
+                    <name>A430</name>
+                    <file> 5 4</file>
                 </tool>
             </inputs>
         </file>

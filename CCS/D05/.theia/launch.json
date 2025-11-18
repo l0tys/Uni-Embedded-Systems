@@ -104,6 +104,24 @@
                 "name": "UC2W_LEDandPBs_PBLockIRQ_Mk2",
                 "resourceId": "/UC2W_LEDandPBs_PBLockIRQ_Mk2"
             }
+        },
+        {
+            "name": "UC3B_fDCO",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC3B_fDCO",
+                "resourceId": "/UC3B_fDCO"
+            }
+        },
+        {
+            "name": "UC3C_DIVM",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC3C_DIVM",
+                "resourceId": "/UC3C_DIVM"
+            }
         }
     ]
 }

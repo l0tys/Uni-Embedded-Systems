@@ -5,21 +5,20 @@
     <configuration>
         <name>Debug</name>
         <outputs>
+            <file>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</file>
             <file>$PROJ_DIR$\Debug\Obj\UA31W_LEDandPBs_addPC_jmp.r43</file>
+            <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp.s43</file>
             <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
             <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
-            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-            <file>$PROJ_DIR$\..\UA31E_LEDandPBs_if4\UA31E_LEDandPBs_if4.s43</file>
             <file>$PROJ_DIR$\Debug\List\UA31W_LEDandPBs_addPC_jmp.map</file>
-            <file>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</file>
-            <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp.s43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 6 5</file>
+                    <file> 5 0</file>
                 </tool>
             </outputs>
         </file>
@@ -34,7 +33,7 @@
             <inputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 2 0</file>
+                    <file> 4 1</file>
                 </tool>
             </inputs>
         </file>
@@ -43,13 +42,13 @@
             <outputs>
                 <tool>
                     <name>A430</name>
-                    <file> 0</file>
+                    <file> 1</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 3 1</file>
+                    <file> 6 3</file>
                 </tool>
             </inputs>
         </file>
