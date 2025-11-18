@@ -1,7 +1,6 @@
 #include <msp430.h>
 
-void main(void)
-{
+void main(void) {
     WDTCTL = WDTPW | WDTHOLD;
 
     P2SEL &= ~(BIT7 + BIT6);

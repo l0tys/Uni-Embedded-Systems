@@ -2,8 +2,7 @@
 
 char P1LOCK;
 
-void main(void)
-{
+void main(void) {
   WDTCTL = WDTPW | WDTHOLD;
 
   P2SEL &= ~(BIT7 + BIT6);

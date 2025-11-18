@@ -2,8 +2,7 @@
 
 char P2OUT_tmp, P2DIR_tmp;
 
-void main(void)
-{
+void main(void) {
   WDTCTL = WDTPW | WDTHOLD;
 
   P2SEL &= ~(BIT7 + BIT6);
