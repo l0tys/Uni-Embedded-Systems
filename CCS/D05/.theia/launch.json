@@ -149,6 +149,15 @@
                 "name": "UC4X_TWDT",
                 "resourceId": "/UC4X_TWDT"
             }
+        },
+        {
+            "name": "UC4Y_WDT",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC4Y_WDT",
+                "resourceId": "/UC4Y_WDT"
+            }
         }
     ]
 }
