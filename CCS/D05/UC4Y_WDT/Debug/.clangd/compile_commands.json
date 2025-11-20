@@ -1,0 +1,7 @@
+[
+   {
+      "directory" : "C:/Users/User/Desktop/Uni-Embedded-Systems/CCS/D05/UC4Y_WDT/Debug",
+      "command"   : "clang++ -I\"C:/ti/ccs2030/ccs/ccs_base/msp430/include\" -I\"C:/Users/User/Desktop/Uni-Embedded-Systems/CCS/D05/UC4Y_WDT\" -I\"C:/ti/ccs2030/ccs/tools/compiler/ti-cgt-msp430_21.6.1.LTS/include\" -D__MSP430G2553__ -xc",
+      "file"      : "C:/Users/User/Desktop/Uni-Embedded-Systems/CCS/D05/UC4Y_WDT/main.c"
+   }
+]
