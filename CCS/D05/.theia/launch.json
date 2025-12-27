@@ -158,6 +158,69 @@
                 "name": "UC4Y_WDT",
                 "resourceId": "/UC4Y_WDT"
             }
+        },
+        {
+            "name": "UC51C_TA_UPDown",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC51C_TA_UPDown",
+                "resourceId": "/UC51C_TA_UPDown"
+            }
+        },
+        {
+            "name": "UC51B_TA_UP",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC51B_TA_UP",
+                "resourceId": "/UC51B_TA_UP"
+            }
+        },
+        {
+            "name": "UC52A_PWM",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC52A_PWM",
+                "resourceId": "/UC52A_PWM"
+            }
+        },
+        {
+            "name": "UC52B_FM1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC52B_FM1",
+                "resourceId": "/UC52B_FM1"
+            }
+        },
+        {
+            "name": "UC52C_FM0_Mk1",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC52C_FM0_Mk1",
+                "resourceId": "/UC52C_FM0_Mk1"
+            }
+        },
+        {
+            "name": "UC52C_FM0_Mk2",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC52C_FM0_Mk2",
+                "resourceId": "/UC52C_FM0_Mk2"
+            }
+        },
+        {
+            "name": "UC52D_PHM",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC52D_PHM",
+                "resourceId": "/UC52D_PHM"
+            }
         }
     ]
 }

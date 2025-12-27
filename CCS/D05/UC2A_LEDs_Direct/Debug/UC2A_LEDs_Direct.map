@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker PC v21.6.1                     
 ******************************************************************************
->> Linked Sun Nov  2 00:37:31 2025
+>> Linked Wed Dec 17 00:34:32 2025
 
 OUTPUT FILE NAME:   <UC2A_LEDs_Direct.out>
 ENTRY POINT SYMBOL: "_c_int00_noinit_noargs"  address: 0000c062

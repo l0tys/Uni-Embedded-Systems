@@ -43,5 +43,5 @@ PB14on_PB15on   mov.b   #11111111b,     &P2DIR
 
                 org     0xFFFE                          ; Pointer to main program
                 dw      main
-                
+
                 END

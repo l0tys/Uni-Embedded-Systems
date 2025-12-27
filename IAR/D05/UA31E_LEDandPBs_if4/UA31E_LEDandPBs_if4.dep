@@ -5,28 +5,28 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\UA31E_LEDandPBs_if4.s43</file>
-            <file>$PROJ_DIR$\UA31E_LEDandPBs_if4_MkII.s43</file>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA31E_LEDandPBs_if4.r43</file>
             <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA31E_LEDandPBs_if4_MkII.r43</file>
-            <file>$PROJ_DIR$\Debug\Exe\UA31E_LEDandPBs_if4.d43</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
             <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31E_LEDandPBs_if4.d43</file>
+            <file>$PROJ_DIR$\UA31E_LEDandPBs_if4_MkII.s43</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31E_LEDandPBs_if4_MkII.r43</file>
+            <file>$PROJ_DIR$\UA31E_LEDandPBs_if4.s43</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31E_LEDandPBs_if4.r43</file>
             <file>$PROJ_DIR$\Debug\List\UA31E_LEDandPBs_if4.map</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\UA31E_LEDandPBs_if4.s43</name>
+            <name>$PROJ_DIR$\Debug\Exe\UA31E_LEDandPBs_if4.d43</name>
             <outputs>
                 <tool>
-                    <name>A430</name>
-                    <file> 3</file>
+                    <name>XLINK</name>
+                    <file> 8</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>A430</name>
-                    <file> 4 7</file>
+                    <name>XLINK</name>
+                    <file> 1 5</file>
                 </tool>
             </inputs>
         </file>
@@ -41,22 +41,22 @@
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 4 7</file>
+                    <file> 0 2</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\UA31E_LEDandPBs_if4.d43</name>
+            <name>$PROJ_DIR$\UA31E_LEDandPBs_if4.s43</name>
             <outputs>
                 <tool>
-                    <name>XLINK</name>
-                    <file> 8</file>
+                    <name>A430</name>
+                    <file> 7</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>XLINK</name>
-                    <file> 2 5</file>
+                    <name>A430</name>
+                    <file> 0 2</file>
                 </tool>
             </inputs>
         </file>
@@ -65,7 +65,7 @@
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 8 6</file>
+                    <file> 8 3</file>
                 </tool>
             </outputs>
         </file>

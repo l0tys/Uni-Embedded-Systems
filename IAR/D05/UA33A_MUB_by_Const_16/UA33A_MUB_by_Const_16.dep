@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>1399251018</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\UA31W_LEDandPBs_addPC_jmp\UA31W_LEDandPBs_addPC_jmp.s43</file>
+            <file>$PROJ_DIR$\..\UA40_Test_Stack\UA40_Test_Stack.s43</file>
+            <file>$PROJ_DIR$\UA33A_MUB_by_Const_16.s43</file>
+            <file>$PROJ_DIR$\..\UA31A_LEDs_Direct\UA31A_LEDs_Direct.s43</file>
+            <file>$PROJ_DIR$\asm.s43</file>
+        </outputs>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>XLINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

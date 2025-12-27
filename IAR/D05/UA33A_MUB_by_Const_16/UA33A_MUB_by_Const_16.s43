@@ -1,0 +1,41 @@
+                #include "msp430.h"                     ; Main definitions
+
+                org     0xC000
+
+main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
+
+                mov     #40*2,          R4
+
+main_loop       mov     0x1000(R4),     R15             ; Nth element is X=R15
+
+                mov     #0,             R10             ; Initial temporary sum = 0  
+                   
+                rla                     R15             ; R15 = 2X
+                add     R15,            R10             ; S = 2X   
+                rla                     R15             ; R15 = 4X 
+                rla                     R15             ; R15 = 8X
+                rla                     R15             ; R15 = 16X
+                add     R15,            R10             ; S = 2X + 16X = 18X
+                rla                     R15             ; R15 = 32X
+                add     R15,            R10             ; S = 2X + 16X + 32X = 50X
+                rla                     R15             ; R15 = 64X
+                add     R15,            R10             ; S = 2X + 16X + 32X + 64X = 114X
+
+                mov     R10,            0x0200(R4)
+                
+                decd                    R4
+                jc                      main_loop
+
+                jmp     main
+                
+                org     0x1000
+                
+My_array        dw      0, 16, 31, 45, 59, 71, 81, 89, 95, 99, 100
+                dw      99, 95, 89, 81, 71, 59, 45, 31, 16, 0
+                dw      -16, -31, -45, -59, -71, -81, -89, -95, -99, -100
+                dw      -99, -95, -89, -81, -71, -59, -45, -31, -16, 0     
+
+                org     0xFFFE                          ; Pointer to main program
+                dw      main
+                
+                END
