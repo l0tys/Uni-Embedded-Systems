@@ -221,6 +221,15 @@
                 "name": "UC52D_PHM",
                 "resourceId": "/UC52D_PHM"
             }
+        },
+        {
+            "name": "UC51A_TA_Continuous",
+            "type": "ccs-debug",
+            "request": "launch",
+            "projectInfo": {
+                "name": "UC51A_TA_Continuous",
+                "resourceId": "/UC51A_TA_Continuous"
+            }
         }
     ]
 }
