@@ -1,24 +1,25 @@
-                #include "msp430.h"                     ; Main definitions
+		#include "msp430.h"			; Main definitions
 
                 org     0xC000
 
-main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
-                mov     #0x0400,        SP              ; ENable stack
+main            mov     #WDTPW+WDTHOLD, &WDTCTL		; Stop Watchdog
+                mov     #0x0400,        SP		; Enable stack
 
-                mov     #60*2,          R4              ; dADDR for 61th element
+                mov     #60*2,          R4		; dADDR for 61th element
 
-main_loop       mov     0x1000(R4),     R15             ; Nth element is X=R15
+main_loop       mov     0x1000(R4),     R15		; Nth element is X=R15
 
                 cmp     #100,           R15
-                jge                     Range_p100_p200
+                jge                     Range_p100_p200    
                 
                 cmp     #0,             R15
                 jge                     Range_0_p100
                 
-Range_m200_0    dec                     R15             ; Reversed 2š's complement
-                inv                     R15             ; 0...200
+Range_m200_0    dec                     R15		; Reversed 2's complement
+                inv                     R15		; 0...200
 
-                mov     #11110011b,     R14             ; K3 = 0.95
+                mov     R15,            R14
+                mov     #11110011b,     R5              ; K3 = 0.95
                 call                    #MUL_16bits
                 
                 clrc
@@ -37,14 +38,15 @@ Range_m200_0    dec                     R15             ; Reversed 2š's compleme
                 inc                     R10
 
 CommonPoint     mov     R10,            0x0200(R4)
-                
-                decd                    R4
-                jc                      main_loop
 
-sleep_mode      bis     #CPUOFF,        SR              ; End of program
+                sub     #2,             R4
+                jhs                     main_loop
+
+sleep_mode      bis     #CPUOFF,        SR		; End of program
                 nop
                 
-Range_0_p100    mov     #100000011b,    R14             ; K1 = 8.10
+Range_0_p100    mov     R15,            R14
+                mov     #100000011b,    R5              ; K1 = 8.10
                 call                    #MUL_16bits
                 
                 clrc
@@ -59,9 +61,9 @@ Range_0_p100    mov     #100000011b,    R14             ; K1 = 8.10
                 jmp                     CommonPoint
                 
 Range_p100_p200 mov     R15,            R14
-                sub     #100,           R14             ; R14=Xk-100           
+                sub     #100,           R14             ; R14 = Xk - 100
 
-                mov     #01111000b,     R14             ; K2 = 0.47
+                mov     #011110000b,    R5              ; K2 = 0.47
                 call                    #MUL_16bits
                 
                 clrc
@@ -81,22 +83,26 @@ Range_p100_p200 mov     R15,            R14
                 
                 jmp                     CommonPoint
                 
-MUL_16bits      mov     #0,             R10             ; Initial result is 0
+MUL_16bits      push                    R14
+                push                    R5
+                clr                     R10
 
 mul_loop        clrc
-                rrc                     R14             ; Test LSb of multiplier
+                rrc                     R5		; Test LSb of multiplier
                 jnc                     NoAdd2S
                 
-Add2S           add     R15,            R10             ; Add if LSb of multiplier = 1
+Add2S           add     R14,            R10		; Add if LSb of multiplier = 1
 
-NoAdd2S         add     R15,            R15             ; R15=X*2^shifts
+NoAdd2S         rla                     R14		; R15=X*2^shifts
 
-                tst                     R14
+                tst                     R5
                 jnz                     mul_loop
                 
+                pop                     R5
+                pop                     R14
                 ret
                 
-                org     1000h                           ; Input array
+                org     1000h				; Input array
                 dw      0, 21, 42, 62, 81, 100, 118, 134, 149, 162, 173, 183
                 dw      190, 196, 199, 200, 199, 196, 190, 183, 173, 162, 149
                 dw      134, 118, 100, 81, 62, 42, 21, 0, -21, -42, -62, -81
@@ -104,7 +110,7 @@ NoAdd2S         add     R15,            R15             ; R15=X*2^shifts
                 dw      -199, -200, -199, -196, -190, -183, -173, -162, -149
                 dw      -134, -118, -100, -81, -62, -42, -21, 0
                 
-                org     0xFFFE                          ; Pointer to main program
+                org     0xFFFE				; Pointer to main program
                 dw      main
                 
                 END
