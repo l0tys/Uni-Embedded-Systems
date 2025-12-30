@@ -725,7 +725,7 @@
                 </option>
                 <option>
                     <name>OutputFile</name>
-                    <state>templproj.d43</state>
+                    <state>UA32B_Transform_32.d43</state>
                 </option>
                 <option>
                     <name>OutputFormat</name>
@@ -2236,6 +2236,6 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\asm.s43</name>
+        <name>$PROJ_DIR$\UA32B_Transform_32.s43</name>
     </file>
 </project>

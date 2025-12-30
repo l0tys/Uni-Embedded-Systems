@@ -6,25 +6,34 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31D_LEDandPBs_if2_if2.r43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$PROJ_DIR$\Debug\List\UA31D_LEDandPBs_if2_if2.map</file>
             <file>$PROJ_DIR$\UA31D_LEDandPBs_if2_if2.s43</file>
             <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA31D_LEDandPBs_if2_if2.r43</file>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
-            <file>$PROJ_DIR$\Debug\List\UA31D_LEDandPBs_if2_if2.map</file>
         </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 4 0</file>
+                </tool>
+            </outputs>
+        </file>
         <file>
             <name>$PROJ_DIR$\Debug\Exe\UA31D_LEDandPBs_if2_if2.d43</name>
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 6</file>
+                    <file> 4</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 5 4</file>
+                    <file> 1 2</file>
                 </tool>
             </inputs>
         </file>
@@ -33,24 +42,15 @@
             <outputs>
                 <tool>
                     <name>A430</name>
-                    <file> 4</file>
+                    <file> 2</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 2 3</file>
+                    <file> 6 3</file>
                 </tool>
             </inputs>
-        </file>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 6 0</file>
-                </tool>
-            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>
