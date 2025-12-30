@@ -1,0 +1,67 @@
+                #include "msp430.h"                     ; Main definitions
+
+                org     0xC000
+
+main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
+
+                mov     #40*4,          R4              ; dADDR = (41th-1)*4bytes
+
+main_loop       mov     0x1000(R4),     R14             ; Nth element is X=R15R14
+                mov     0x1002(R4),     R15
+
+                mov     #0,             R10             ; Initial temporary sum = 0  
+                mov     #0,             R11             ; S is @ R11R10
+                   
+                rla                     R14             ; R15 = 2X
+                rlc                     R15             ; R15 = 2X
+
+                add     R14,            R10             ; SL = 2XL @ R10
+                addc    R15,            R11             ; SH = 2XH @ R11
+ 
+                rla                     R14             ; X = 4X
+                rlc                     R15             
+
+                rla                     R14             ; X = 8X
+                rlc                     R15             
+
+                rla                     R14             ; X = 16X
+                rlc                     R15             
+
+                add     R14,            R10             ; S = 2X + 16X = 18X
+                addc    R15,            R11             
+
+                rla                     R14             ; X = 32X
+                rlc                     R15             
+
+                add     R14,            R10             ; S = 2X + 16X + 32X = 50X
+                addc    R15,            R11
+
+                rla                     R14             ; R15 = 64X
+                rlc                     R15
+
+                add     R14,            R10             ; S = 2X + 16X + 32X + 64X = 114X
+                addc    R15,            R11
+
+                mov     R10,            0x0200(R4)
+                mov     R11,            0x0202(R4)
+                
+                sub     #4,             R4
+                jc                      main_loop
+
+                jmp     main
+                
+                org     0x1000
+                
+My_Array        dl      0, 16000, 31000, 45000, 59000
+                dl      71000, 81000, 89000, 95000, 99000
+                dl      100000, 99000, 95000, 89000, 81000
+                dl      71000, 59000, 45000, 31000, 16000, 0
+                dl      -16000, -31000, -45000, -59000, -71000
+                dl      -81000, -89000, -95000, -99000, -100000
+                dl      -99000, -95000, -89000, -81000, -71000
+                dl      -59000, -45000, -31000, -16000, 0     
+
+                org     0xFFFE                          ; Pointer to main program
+                dw      main
+                
+                END
