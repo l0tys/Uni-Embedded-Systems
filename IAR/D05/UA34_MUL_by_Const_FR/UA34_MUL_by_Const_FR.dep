@@ -6,9 +6,6 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\UA34_MUL_by_Const_FR.s43</file>
-            <file>$PROJ_DIR$\..\UA33A_MUB_by_Const_16\UA33A_MUB_by_Const_16.s43</file>
-            <file>$PROJ_DIR$\..\UA33B_MUL_by_Const_32\UA33B_MUL_by_Const_32.s43</file>
-            <file>$PROJ_DIR$\asm.s43</file>
         </outputs>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>

@@ -5,20 +5,20 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA31C_LEDs_XOR.r43</file>
             <file>$TOOLKIT_DIR$\inc\msp430.h</file>
             <file>$PROJ_DIR$\Debug\Exe\UA31C_LEDs_XOR.d43</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
             <file>$PROJ_DIR$\Debug\List\UA31C_LEDs_XOR.map</file>
-            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31C_LEDs_XOR.r43</file>
             <file>$PROJ_DIR$\UA31C_LEDs_XOR.s43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 4 3</file>
+                    <file> 3 1</file>
                 </tool>
             </outputs>
         </file>
@@ -27,13 +27,13 @@
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 4</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 0 1</file>
+                    <file> 2 4</file>
                 </tool>
             </inputs>
         </file>
@@ -42,13 +42,13 @@
             <outputs>
                 <tool>
                     <name>A430</name>
-                    <file> 1</file>
+                    <file> 4</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 2 5</file>
+                    <file> 0 6</file>
                 </tool>
             </inputs>
         </file>

@@ -5,52 +5,52 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
             <file>$PROJ_DIR$\Debug\Obj\UA31G_LEDandPBs_PBFunction.r43</file>
-            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31G_LEDandPBs_PBFunction.d43</file>
             <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
             <file>$PROJ_DIR$\Debug\List\UA31G_LEDandPBs_PBFunction.map</file>
             <file>$PROJ_DIR$\UA31G_LEDandPBs_PBFunction.s43</file>
-            <file>$PROJ_DIR$\Debug\Exe\UA31G_LEDandPBs_PBFunction.d43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
         </outputs>
         <file>
-            <name>[ROOT_NODE]</name>
+            <name>$PROJ_DIR$\Debug\Exe\UA31G_LEDandPBs_PBFunction.d43</name>
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 4 6</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 2 0</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\UA31G_LEDandPBs_PBFunction.s43</name>
             <outputs>
                 <tool>
                     <name>A430</name>
-                    <file> 1</file>
+                    <file> 0</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 2 0</file>
+                    <file> 6 5</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Debug\Exe\UA31G_LEDandPBs_PBFunction.d43</name>
+            <name>[ROOT_NODE]</name>
             <outputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 4</file>
-                </tool>
-            </outputs>
-            <inputs>
                 <tool>
                     <name>XLINK</name>
                     <file> 3 1</file>
                 </tool>
-            </inputs>
+            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>

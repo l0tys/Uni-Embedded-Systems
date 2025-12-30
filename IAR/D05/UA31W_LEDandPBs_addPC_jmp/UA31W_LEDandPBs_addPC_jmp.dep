@@ -5,38 +5,14 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA31W_LEDandPBs_addPC_jmp.r43</file>
-            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
-            <file>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</file>
-            <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp.s43</file>
             <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31W_LEDandPBs_addPC_jmp.r43</file>
+            <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp.s43</file>
             <file>$PROJ_DIR$\Debug\List\UA31W_LEDandPBs_addPC_jmp.map</file>
+            <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</file>
         </outputs>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 6 3</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</name>
-            <outputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 6</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 5 1</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\UA31W_LEDandPBs_addPC_jmp.s43</name>
             <outputs>
@@ -48,9 +24,33 @@
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 2 0</file>
+                    <file> 4 5</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\UA31W_LEDandPBs_addPC_jmp.d43</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 3</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 0 1</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 3 6</file>
+                </tool>
+            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>

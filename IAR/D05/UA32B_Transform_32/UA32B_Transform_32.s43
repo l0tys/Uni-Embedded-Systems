@@ -1,0 +1,50 @@
+                #include "msp430.h"                     ; Main definitions
+
+                org     0xC000
+
+main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
+                mov     #40*4,          R4              ; dADDR = (41th-1)*4bytes
+
+main_loop       mov     0x1000(R4),     R14             ; Nth element is X=R15R14
+                mov     0x1002(R4),     R15
+
+                cmp     #0x0007,        R15                 
+                jl      Set_Zero                        
+                jne     Do_Transform                    
+        
+                cmp     #0xA120,        R14                   
+                jl      Set_Zero                         
+
+Do_Transform    mov     R14, R10                     
+                mov     R15, R11
+                sub     #0xA120,        R10                 
+                subc    #0x0007,        R11                
+                jmp     CommonPoint
+
+Set_Zero        mov     #0,             R10                     
+                mov     #0,             R11                      
+
+CommonPoint     mov     R10,            0x0200(R4)             
+                mov     R11,            0x0202(R4)            
+        
+                sub     #4,             R4                       
+                jc      main_loop                    
+
+sleep_mode      bis     #CPUOFF,        SR              ; End of program
+                nop
+
+                org     0x1000
+                
+My_Array        dl      0, 156000, 309000, 454000, 588000
+                dl      707000, 809000, 891000, 951000, 988000
+                dl      1000000, 988000, 951000, 891000, 809000
+                dl      707000, 588000, 454000, 309000, 156000, 0
+                dl      -156000, -309000, -454000, -588000, -707000
+                dl      -809000, -891000, -951000, -988000, -1000000
+                dl      -988000, -951000, -891000, -809000, -707000
+                dl      -588000, -454000, -309000, -156000, 0
+
+                org     0xFFFE                          ; Pointer to main program
+                dw      main
+
+                END

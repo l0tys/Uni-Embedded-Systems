@@ -5,52 +5,43 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
-            <file>$PROJ_DIR$\UA31V_LEDandPBs_addPC_16bytes.s43</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA31V_LEDandPBs_addPC_16bytes.r43</file>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
             <file>$PROJ_DIR$\UA31W_LEDandPBs_addPC_16bytes.s43</file>
-            <file>$PROJ_DIR$\Debug\Obj\UA31W_LEDandPBs_addPC_16bytes.r43</file>
-            <file>$PROJ_DIR$\Debug\List\UA31V_LEDandPBs_addPC_16bytes.map</file>
+            <file>$PROJ_DIR$\UA31V_LEDandPBs_addPC_16bytes.s43</file>
             <file>$PROJ_DIR$\Debug\Exe\UA31V_LEDandPBs_addPC_16bytes.d43</file>
+            <file>$PROJ_DIR$\Debug\List\UA31V_LEDandPBs_addPC_16bytes.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31V_LEDandPBs_addPC_16bytes.r43</file>
             <file>$TOOLKIT_DIR$\inc\msp430.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\UA31W_LEDandPBs_addPC_16bytes.r43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
         </outputs>
         <file>
-            <name>[ROOT_NODE]</name>
+            <name>$PROJ_DIR$\UA31W_LEDandPBs_addPC_16bytes.s43</name>
             <outputs>
                 <tool>
-                    <name>XLINK</name>
-                    <file> 6 7</file>
+                    <name>A430</name>
+                    <file> 7</file>
                 </tool>
             </outputs>
+            <inputs>
+                <tool>
+                    <name>A430</name>
+                    <file> 5 8</file>
+                </tool>
+            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\UA31V_LEDandPBs_addPC_16bytes.s43</name>
             <outputs>
                 <tool>
                     <name>A430</name>
-                    <file> 2</file>
+                    <file> 4</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 8 0</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\UA31W_LEDandPBs_addPC_16bytes.s43</name>
-            <outputs>
-                <tool>
-                    <name>A430</name>
-                    <file> 5</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>A430</name>
-                    <file> 8 0</file>
+                    <file> 5 8</file>
                 </tool>
             </inputs>
         </file>
@@ -59,15 +50,24 @@
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 6</file>
+                    <file> 3</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 3 2</file>
+                    <file> 6 4</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 3 2</file>
+                </tool>
+            </outputs>
         </file>
         <forcedrebuild>
             <name>[MULTI_TOOL]</name>

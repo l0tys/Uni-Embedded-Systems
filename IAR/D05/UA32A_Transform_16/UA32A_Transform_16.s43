@@ -1,0 +1,34 @@
+                #include "msp430.h"                     ; Main definitions
+
+                org     0xC000
+
+main            mov     #WDTPW+WDTHOLD, &WDTCTL         ; Stop Watchdog
+                mov     #40*2, R4                       ; dADDR for 41th element
+
+main_loop       mov     0x1000(R4),     R15             ; Nth element is X=R15
+        
+                cmp     #500,           R15             ; Compare X with L=500
+                jge     Transform                       ; If X > 500, transform
+        
+Set_Zero        mov     #0,             R15             ; Y = 0
+                jmp     CommonPoint
+        
+Transform       sub     #500,           R15             ; Y = X - 500 = (-L + X)
+        
+CommonPoint     mov     R15,            0x0200(R4)                 
+                sub     #2,             R4                          
+                jhs     main_loop                       
+        
+sleep_mode      bis     #CPUOFF, SR                     ; End of program
+                nop
+
+                org     0x1000                          ; Input array
+My_array        dw      0, 156, 309, 454, 588, 707, 809, 891, 951, 988, 1000
+                dw      988, 951, 891, 809, 707, 588, 454, 309, 156, 0, -156
+                dw      -309, -454, -588, -707, -809, -891, -951, -988, -1000
+                dw      -988, -951, -891, -809, -707, -588, -454, -309, -156, 0
+
+                org     0xFFFE                          ; Pointer to main program
+                dw      main
+
+                END
