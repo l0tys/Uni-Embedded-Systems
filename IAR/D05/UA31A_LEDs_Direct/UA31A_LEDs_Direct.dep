@@ -5,41 +5,42 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
-            <file>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</file>
             <file>$PROJ_DIR$\UA31A_LEDs_Direct.s43</file>
+            <file>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</file>
+            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\lnk430g2553.xcl</file>
             <file>$TOOLKIT_DIR$\inc\msp430.h</file>
             <file>$PROJ_DIR$\Debug\Obj\UA31A_LEDs_Direct.r43</file>
             <file>$PROJ_DIR$\Debug\List\UA31A_LEDs_Direct.map</file>
-            <file>$TOOLKIT_DIR$\inc\msp430g2553.h</file>
+            <file>$PROJ_DIR$\..\UA33B_MUL_by_Const_32\UA33B_MUL_by_Const_32.s43</file>
         </outputs>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</name>
-            <outputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 5</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>XLINK</name>
-                    <file> 0 4</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\UA31A_LEDs_Direct.s43</name>
             <outputs>
                 <tool>
                     <name>A430</name>
-                    <file> 4</file>
+                    <file> 5</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>A430</name>
-                    <file> 3 6</file>
+                    <file> 4 2</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\UA31A_LEDs_Direct.d43</name>
+            <outputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 6</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>XLINK</name>
+                    <file> 3 5</file>
                 </tool>
             </inputs>
         </file>
@@ -48,7 +49,7 @@
             <outputs>
                 <tool>
                     <name>XLINK</name>
-                    <file> 5 1</file>
+                    <file> 6 1</file>
                 </tool>
             </outputs>
         </file>

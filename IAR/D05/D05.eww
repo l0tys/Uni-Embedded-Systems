@@ -25,6 +25,12 @@
         <path>$WS_DIR$\UA33A_MUB_by_Const_16\UA33A_MUB_by_Const_16.ewp</path>
     </project>
     <project>
+        <path>$WS_DIR$\UA33B_MUL_by_Const_32\UA33B_MUL_by_Const_32.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\UA34_MUL_by_Const_FR\UA34_MUL_by_Const_FR.ewp</path>
+    </project>
+    <project>
         <path>$WS_DIR$\UA40_Test_Stack\UA40_Test_Stack.ewp</path>
     </project>
     <batchBuild />

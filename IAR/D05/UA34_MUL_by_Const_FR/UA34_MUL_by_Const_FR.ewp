@@ -88,7 +88,7 @@
                 </option>
                 <option>
                     <name>OGChipSelectMenu</name>
-                    <state>MSP430F149	MSP430F149</state>
+                    <state>MSP430G2553	MSP430G2553</state>
                 </option>
                 <option>
                     <name>GStackHeapOverride</name>
@@ -201,7 +201,7 @@
                 </option>
                 <option>
                     <name>Math description</name>
-                    <state></state>
+                    <state>Default variants of cos, sin, tan, log, log10, pow, and exp.</state>
                 </option>
                 <option>
                     <name>GESupportFrwp</name>
@@ -725,7 +725,7 @@
                 </option>
                 <option>
                     <name>OutputFile</name>
-                    <state>UA33B_MUL_by_Const_32.d43</state>
+                    <state>UA34_MUL_by_Const_FR.d43</state>
                 </option>
                 <option>
                     <name>OutputFormat</name>
@@ -2236,6 +2236,6 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\UA33B_MUL_by_Const_32.s43</name>
+        <name>$PROJ_DIR$\UA34_MUL_by_Const_FR.s43</name>
     </file>
 </project>
